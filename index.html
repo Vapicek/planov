@@ -127,6 +127,15 @@ body {
 #status-progress::-webkit-progress-value { background: #8fe36a; border-radius: 999px; }
 #status-progress::-moz-progress-bar { background: #8fe36a; border-radius: 999px; }
 #status-notice { z-index: 3; }
+#status-progress:indeterminate {
+  background-color: #28322a;
+  background-image: linear-gradient(#8fe36a, #8fe36a);
+  background-size: 35% 100%; background-repeat: no-repeat; background-origin: content-box; background-clip: content-box;
+  animation: planovNacitani 1.1s ease-in-out infinite alternate;
+}
+#status-progress:indeterminate::-webkit-progress-bar { background: transparent; }
+#status-progress:indeterminate::-moz-progress-bar { background: transparent; }
+@keyframes planovNacitani { from { background-position: 0% 0; } to { background-position: 100% 0; } }
 </style>
 
 	</head>
