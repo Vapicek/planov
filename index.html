@@ -107,23 +107,26 @@ body {
 })();
 </script>
 <style>
-/* Pláňov – načítací obrazovka: obrázek přes celou obrazovku + světle zelený proužek */
-:root { --sk: max(calc(100vw / 1280), calc(100vh / 720)); }
-#status { background-color: #11161f !important; }
-#status-splash.fullsize--true { object-fit: cover !important; }
+/* Pláňov – načítací obrazovka: rozmazané pozadí přes celou obrazovku, obrázek celý uprostřed, světle zelený proužek */
+:root { --sk: min(calc(100vw / 1280), calc(100vh / 720)); }
+#status { background-color: #11161f !important; overflow: hidden; }
+#status::before { content: ''; position: absolute; inset: -40px; background: url(index.png) center / cover no-repeat; filter: blur(14px) brightness(0.55); }
+#status-splash.fullsize--true { object-fit: contain !important; z-index: 1; }
 #status-progress {
   -webkit-appearance: none; appearance: none;
-  position: absolute !important;
+  position: absolute !important; z-index: 2;
   left: 50% !important; right: auto !important; bottom: auto !important;
   top: calc(50% + 52 * var(--sk)) !important;
   transform: translateX(-50%);
   width: calc(400 * var(--sk)) !important; height: calc(18 * var(--sk)) !important;
+  min-height: 6px;
   margin: 0 !important; padding: 2px; box-sizing: border-box;
   background: #28322a; border: 2px solid #141914; border-radius: 999px; overflow: hidden;
 }
 #status-progress::-webkit-progress-bar { background: transparent; border-radius: 999px; }
 #status-progress::-webkit-progress-value { background: #8fe36a; border-radius: 999px; }
 #status-progress::-moz-progress-bar { background: #8fe36a; border-radius: 999px; }
+#status-notice { z-index: 3; }
 </style>
 
 	</head>
