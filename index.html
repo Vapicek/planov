@@ -125,6 +125,22 @@ body {
 @keyframes planovNacitani { from { margin-left: 0%; } to { margin-left: 65%; } }
 </style>
 <script>
+// Pláňov: nová verze hry se načte hned (prohlížeč nečeká na zavření všech karet)
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistration().then(function (reg) {
+    if (!reg) return;
+    var poslat = function (w) { if (w && navigator.serviceWorker.controller) w.postMessage('update'); };
+    if (reg.waiting) { poslat(reg.waiting); return; }
+    reg.addEventListener('updatefound', function () {
+      var nw = reg.installing;
+      if (!nw) return;
+      nw.addEventListener('statechange', function () { if (nw.state === 'installed') poslat(nw); });
+    });
+    reg.update().catch(function () {});
+  }).catch(function () {});
+}
+</script>
+<script>
 document.addEventListener('DOMContentLoaded', function () {
   var st = document.getElementById('status');
   if (!st) return;
