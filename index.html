@@ -6,6 +6,11 @@
 <title>Pláňov – česká budovatelská hra zdarma v prohlížeči i na mobilu</title>
 <meta name="description" content="Pláňov je česká budovatelská hra zdarma. Postav si vlastní zasněženou vesničku, přiveď zpátky obyvatele, plň úkoly, zdob na Vánoce a navštěvuj přátele. Hraješ hned v prohlížeči nebo na mobilu.">
 <link rel="canonical" href="https://planov.cz/">
+<link rel="alternate" hreflang="cs" href="https://planov.cz/">
+<link rel="alternate" hreflang="sk" href="https://planov.cz/sk/">
+<link rel="alternate" hreflang="en" href="https://planov.cz/en/">
+<link rel="alternate" hreflang="de" href="https://planov.cz/de/">
+<link rel="alternate" hreflang="x-default" href="https://planov.cz/">
 <meta name="theme-color" content="#152033">
 <meta name="author" content="Aleš Jaroš">
 <meta name="seznam-wmt" content="CqkbfQjwvyB3odmXx73ee1COhKGYRlj8" />
@@ -37,6 +42,20 @@
     if ((m === 11 && day >= 15) || m === 12 || (m === 1 && day <= 6)) document.documentElement.classList.add('vanoce');
   })();
 </script>
+<script>
+  (function () {
+    var L = 'cs';
+    try {
+      var s = localStorage.getItem('planov-lang');
+      if (L === 'cs' && !s && !/bot|crawl|spider|slurp|lighthouse|preview/i.test(navigator.userAgent)) {
+        var b = (navigator.language || '').slice(0, 2).toLowerCase();
+        var cil = b === 'cs' ? '' : ({ sk: '/sk/', de: '/de/' }[b] || '/en/');
+        if (cil) { location.replace(cil + location.hash); return; }
+      }
+      localStorage.setItem('planov-lang', L);
+    } catch (e) {}
+  })();
+</script>
 
 <script type="application/ld+json">
 {
@@ -46,7 +65,7 @@
   "url": "https://planov.cz/",
   "image": "https://planov.cz/assets/og.jpg",
   "description": "Česká budovatelská hra zdarma v prohlížeči i na mobilu. Postav si vlastní vesničku, plň úkoly a navštěvuj přátele.",
-  "inLanguage": "cs",
+  "inLanguage": ["cs", "sk", "en", "de"],
   "genre": ["Budovatelská hra", "Simulace", "Casual"],
   "gamePlatform": ["Webový prohlížeč", "Android"],
   "applicationCategory": "Game",
@@ -106,6 +125,12 @@ h1, h2, h3 { font-family: 'Lora', Georgia, serif; line-height: 1.15; margin: 0 0
 .lista nav a { color: var(--text); text-decoration: none; font-weight: 500; font-size: .95rem; opacity: .9; }
 .lista nav a:hover { opacity: 1; color: var(--zlata); }
 @media (max-width: 760px) { .lista nav a.odkaz { display: none; } }
+
+.jazyky { display: flex; gap: 8px; align-items: center; margin-left: 6px; }
+.jazyky a { display: block; line-height: 0; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,.45); opacity: .7; transition: opacity .15s, transform .15s; }
+.jazyky a:hover { opacity: 1; transform: translateY(-1px); }
+.jazyky a.aktivni { opacity: 1; outline: 2px solid var(--zlata); outline-offset: 1px; }
+.jazyky img { width: 30px; height: 20px; display: block; }
 
 /* ---------- tlačítka ---------- */
 .tl {
@@ -272,6 +297,12 @@ footer a:hover { color: var(--zlata); }
     <a class="odkaz" href="#o-hre">O hře</a>
     <a class="odkaz" href="#jak-zacit">Jak začít</a>
     <a class="odkaz" href="#novinky">Novinky</a>
+    <div class="jazyky">
+      <a href="/" hreflang="cs" lang="cs" class="aktivni" title="Čeština" onclick="try{localStorage.setItem('planov-lang','cs')}catch(e){}"><img src="/assets/vlajky/cs.svg" alt="Čeština" width="30" height="20"></a>
+      <a href="/sk/" hreflang="sk" lang="sk" title="Slovenčina" onclick="try{localStorage.setItem('planov-lang','sk')}catch(e){}"><img src="/assets/vlajky/sk.svg" alt="Slovenčina" width="30" height="20"></a>
+      <a href="/en/" hreflang="en" lang="en" title="English" onclick="try{localStorage.setItem('planov-lang','en')}catch(e){}"><img src="/assets/vlajky/en.svg" alt="English" width="30" height="20"></a>
+      <a href="/de/" hreflang="de" lang="de" title="Deutsch" onclick="try{localStorage.setItem('planov-lang','de')}catch(e){}"><img src="/assets/vlajky/de.svg" alt="Deutsch" width="30" height="20"></a>
+    </div>
   </nav>
 </header>
 
@@ -291,7 +322,7 @@ footer a:hover { color: var(--zlata); }
       <h1 class="titul">Pláňov</h1>
       <p class="podtitul">Česká budovatelská hra zdarma. Postav si vlastní zasněženou vesničku – hned v prohlížeči nebo na mobilu.</p>
       <div class="tlacitka">
-        <a class="tl tl-hrat" href="/hra/">
+        <a class="tl tl-hrat" href="/hra/?lang=cs">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
           HRÁT ZDARMA
         </a>
@@ -443,7 +474,7 @@ footer a:hover { color: var(--zlata); }
     <div class="obal objev">
       <h2>Pláňov čeká na svého starostu</h2>
       <p>Postav si vesničku, jakou chceš. Zdarma a hned teď.</p>
-      <a class="tl tl-hrat" href="/hra/">
+      <a class="tl tl-hrat" href="/hra/?lang=cs">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
         HRÁT ZDARMA
       </a>
@@ -455,7 +486,7 @@ footer a:hover { color: var(--zlata); }
   <div class="obal">
     <div>© <span id="rok">2026</span> Pláňov · Vytvořil <b>Aleš Jaroš</b></div>
     <nav>
-      <a href="/hra/">Hrát</a>
+      <a href="/hra/?lang=cs">Hrát</a>
       <a href="/ochrana-udaju.html">Ochrana osobních údajů</a>
       <a href="https://vapik.itch.io/planov" rel="noopener">Pláňov na itch.io</a>
     </nav>
