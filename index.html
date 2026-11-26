@@ -38,7 +38,7 @@ body {
 }
 
 #status {
-	background-color: #242424;
+	background-color: #121724;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -106,6 +106,26 @@ body {
   }
 })();
 </script>
+<style>
+/* Pláňov – načítací obrazovka: obrázek přes celou obrazovku + světle zelený proužek */
+:root { --sk: max(calc(100vw / 1280), calc(100vh / 720)); }
+#status { background-color: #11161f !important; }
+#status-splash.fullsize--true { object-fit: cover !important; }
+#status-progress {
+  -webkit-appearance: none; appearance: none;
+  position: absolute !important;
+  left: 50% !important; right: auto !important; bottom: auto !important;
+  top: calc(50% + 52 * var(--sk)) !important;
+  transform: translateX(-50%);
+  width: calc(400 * var(--sk)) !important; height: calc(18 * var(--sk)) !important;
+  margin: 0 !important; padding: 2px; box-sizing: border-box;
+  background: #28322a; border: 2px solid #141914; border-radius: 999px; overflow: hidden;
+}
+#status-progress::-webkit-progress-bar { background: transparent; border-radius: 999px; }
+#status-progress::-webkit-progress-value { background: #8fe36a; border-radius: 999px; }
+#status-progress::-moz-progress-bar { background: #8fe36a; border-radius: 999px; }
+</style>
+
 	</head>
 	<body>
 		<canvas id="canvas">
@@ -124,7 +144,7 @@ body {
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":24273624,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4,"serviceWorker":"index.service.worker.js"};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":26681580,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4,"serviceWorker":"index.service.worker.js"};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
