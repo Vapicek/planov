@@ -66,7 +66,7 @@
   "image": "https://planov.cz/assets/og.jpg",
   "description": "Česká budovateľská hra zadarmo v prehliadači aj na mobile. Postav si vlastnú dedinku, plň úlohy a navštevuj priateľov.",
   "inLanguage": ["cs", "sk", "en", "de"],
-  "genre": ["Budovateľská hra", "Simulácia", "Casual"],
+  "genre": ["Budovateľská hra", "Stratégia", "Simulácia", "Casual"],
   "gamePlatform": ["Webový prehliadač", "Android"],
   "applicationCategory": "Game",
   "operatingSystem": "Web, Android",
@@ -121,10 +121,10 @@ h1, h2, h3 { font-family: 'Lora', Georgia, serif; line-height: 1.15; margin: 0 0
 .lista.pevna { background: rgba(16, 24, 38, 0.92); box-shadow: 0 2px 18px rgba(0,0,0,.4); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
 .lista .znak { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--zlata); font-family: 'Lora', serif; font-weight: 700; font-size: 1.35rem; }
 .lista .znak img { width: 34px; height: 34px; border-radius: 9px; }
-.lista nav { display: flex; align-items: center; gap: 22px; }
+.lista nav { display: flex; align-items: center; gap: 20px; }
 .lista nav a { color: var(--text); text-decoration: none; font-weight: 500; font-size: .95rem; opacity: .9; }
 .lista nav a:hover { opacity: 1; color: var(--zlata); }
-@media (max-width: 760px) { .lista nav a.odkaz { display: none; } }
+@media (max-width: 860px) { .lista nav a.odkaz { display: none; } }
 
 .jazyky { display: flex; gap: 8px; align-items: center; margin-left: 6px; }
 .jazyky a { display: block; line-height: 0; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,.45); opacity: .7; transition: opacity .15s, transform .15s; }
@@ -261,6 +261,14 @@ section { padding: 90px 0; }
 .novinka ul { margin: 0; padding-left: 1.1em; color: var(--text2); }
 @media (max-width: 520px) { .novinka { grid-template-columns: 1fr; gap: 6px; } }
 
+/* texty pro vyhledávače */
+.texty { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+.texty h3 { color: var(--zlata); font-size: 1.25rem; }
+.texty p { color: var(--text2); margin: 0; }
+.vse { text-align: center; margin-top: 28px; color: var(--text2); }
+#proc { padding-top: 20px; }
+.vse a { font-weight: 500; }
+
 /* závěr */
 .zaver { text-align: center; background: radial-gradient(ellipse at center, #22324c 0%, var(--noc) 70%); }
 .zaver h2 { font-size: clamp(2rem, 5vw, 3.2rem); color: var(--zlata); }
@@ -295,8 +303,9 @@ footer a:hover { color: var(--zlata); }
   <a class="znak" href="/sk/"><img src="/assets/icon-192.png" alt="" width="34" height="34">Pláňov</a>
   <nav>
     <a class="odkaz" href="#o-hre">O hre</a>
-    <a class="odkaz" href="#jak-zacit">Ako začať</a>
-    <a class="odkaz" href="#novinky">Novinky</a>
+    <a class="odkaz" href="/sk/encyklopedia/">Encyklopédia</a>
+    <a class="odkaz" href="/sk/navod/">Návod</a>
+    <a class="odkaz" href="/sk/novinky/">Novinky</a>
     <div class="jazyky">
       <a href="/" hreflang="cs" lang="cs" title="Čeština" onclick="try{localStorage.setItem('planov-lang','cs')}catch(e){}"><img src="/assets/vlajky/cs.svg" alt="Čeština" width="30" height="20"></a>
       <a href="/sk/" hreflang="sk" lang="sk" class="aktivni" title="Slovenčina" onclick="try{localStorage.setItem('planov-lang','sk')}catch(e){}"><img src="/assets/vlajky/sk.svg" alt="Slovenčina" width="30" height="20"></a>
@@ -378,12 +387,12 @@ footer a:hover { color: var(--zlata); }
   </section>
 
   <!-- PRUH S BUDOVAMI -->
-  <div class="budovy" aria-hidden="true">
+  <div class="budovy">
     <div class="pas" id="pas">
-      <img src="/assets/chaloupka.webp" alt="" loading="lazy"><img src="/assets/pekarna.webp" alt="" loading="lazy">
-      <img src="/assets/vanocni_stromek.webp" alt="" loading="lazy"><img src="/assets/kostel.webp" alt="" loading="lazy">
-      <img src="/assets/svarak.webp" alt="" loading="lazy"><img src="/assets/kluziste.webp" alt="" loading="lazy">
-      <img src="/assets/stadion.webp" alt="" loading="lazy"><img src="/assets/darky.webp" alt="" loading="lazy">
+      <img src="/assets/chaloupka.webp" alt="Chalúpka" loading="lazy"><img src="/assets/pekarna.webp" alt="Pekáreň" loading="lazy">
+      <img src="/assets/vanocni_stromek.webp" alt="Vianočný stromček" loading="lazy"><img src="/assets/kostel.webp" alt="Kostol" loading="lazy">
+      <img src="/assets/svarak.webp" alt="Stánok s vareným vínom" loading="lazy"><img src="/assets/kluziste.webp" alt="Klzisko" loading="lazy">
+      <img src="/assets/stadion.webp" alt="Futbalový štadión" loading="lazy"><img src="/assets/darky.webp" alt="Darčeky pod stromček" loading="lazy">
     </div>
   </div>
 
@@ -444,11 +453,12 @@ footer a:hover { color: var(--zlata); }
       <div class="nadpis objev"><h2>Novinky</h2></div>
       <div class="novinky">
         <div class="novinka objev">
-          <div class="verze">Novo</div>
+          <div class="verze">0.15</div>
           <ul>
+            <li>Hra je po česky, slovensky, anglicky a nemecky</li>
+            <li>Nová mena Coin a aplikácia pre Android na stiahnutie</li>
             <li>Starosta Bohuš prevedie nových hráčov hrou (nápoveda je aj v Nastaveniach)</li>
             <li>Chodníky, cesty a rieka sa dajú ukladať v rade pomocou šípok</li>
-            <li>Presnejšie klikanie na budovy</li>
           </ul>
         </div>
         <div class="novinka objev">
@@ -466,6 +476,31 @@ footer a:hover { color: var(--zlata); }
           </ul>
         </div>
       </div>
+      <p class="vse objev"><a href="/sk/novinky/">Všetky novinky →</a></p>
+    </div>
+  </section>
+
+  <!-- PROČ PLÁŇOV (texty pro vyhledávače) -->
+  <section id="proc">
+    <div class="obal">
+      <div class="nadpis objev">
+        <h2>Online hra zadarmo bez sťahovania</h2>
+      </div>
+      <div class="texty objev">
+        <div>
+          <h3>Budovateľská hra v prehliadači</h3>
+          <p>Pláňov je česká online hra zadarmo, ktorú spustíš priamo v prehliadači – bez sťahovania a bez inštalácie. Budovanie mesta tu začína malou chalúpkou a končí dedinkou plnou domov, obchodov, kostolom, stanicou aj kaštieľom. Stavanie dedinky online si užiješ v Chrome, Safari, Edge aj Firefoxe.</p>
+        </div>
+        <div>
+          <h3>Oddychová hra na mobil aj PC</h3>
+          <p>Nemusíš hrať hodiny v kuse. Pošli obyvateľov na úlohu, vyber peniaze z domov a vráť sa neskôr – dedinka medzitým rastie. Postup sa ukladá do cloudu, takže môžeš hrať striedavo na mobile aj na počítači.</p>
+        </div>
+        <div>
+          <h3>Česká hra s českou atmosférou</h3>
+          <p>Krčma U Krtka, pekáreň, hasičská zbrojnica, futbal s českou ligou a Vianoce s adventným kalendárom. Pláňov je česká hra v prehliadači od českého autora – a hrať ju môžeš aj po slovensky, anglicky a nemecky.</p>
+        </div>
+      </div>
+      <p class="vse objev">Všetky budovy a obyvateľov nájdeš v <a href="/sk/encyklopedia/">encyklopédii</a>, tipy pre začiatočníkov v <a href="/sk/navod/">návode</a>.</p>
     </div>
   </section>
 
@@ -487,6 +522,9 @@ footer a:hover { color: var(--zlata); }
     <div>© <span id="rok">2026</span> Pláňov · Vytvoril <b>Aleš Jaroš</b></div>
     <nav>
       <a href="/hra/?lang=sk">Hrať</a>
+      <a href="/sk/encyklopedia/">Encyklopédia</a>
+      <a href="/sk/navod/">Návod</a>
+      <a href="/sk/novinky/">Novinky</a>
       <a href="/sk/ochrana-udajov.html">Ochrana osobných údajov</a>
       <a href="https://vapik.itch.io/planov" rel="noopener">Pláňov na itch.io</a>
     </nav>

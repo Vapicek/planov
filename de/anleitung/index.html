@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anleitung für Einsteiger – so spielst du Pláňov, Tipps und Tricks</title>
+<meta name="description" content="So startest du in Pláňov: Bauen, Geld, Bewohner, Zufriedenheit, Ausbau, Grundstücke, Weihnachten und Tipps für ein schnell wachsendes Dorf.">
+<link rel="canonical" href="https://planov.cz/de/anleitung/">
+<link rel="alternate" hreflang="cs" href="https://planov.cz/navod/">
+<link rel="alternate" hreflang="sk" href="https://planov.cz/sk/navod/">
+<link rel="alternate" hreflang="en" href="https://planov.cz/en/guide/">
+<link rel="alternate" hreflang="de" href="https://planov.cz/de/anleitung/">
+<link rel="alternate" hreflang="x-default" href="https://planov.cz/navod/">
+<meta name="theme-color" content="#152033">
+<meta name="author" content="Aleš Jaroš">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Pláňov">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://planov.cz/de/anleitung/">
+<meta property="og:title" content="Anleitung für Einsteiger – so spielst du Pláňov, Tipps und Tricks">
+<meta property="og:description" content="So startest du in Pláňov: Bauen, Geld, Bewohner, Zufriedenheit, Ausbau, Grundstücke, Weihnachten und Tipps für ein schnell wachsendes Dorf.">
+<meta property="og:image" content="https://planov.cz/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Pláňov",
+   "item": "https://planov.cz/de/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Anleitung",
+   "item": "https://planov.cz/de/anleitung/"
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Ist Pláňov kostenlos?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ja. Pláňov ist komplett kostenlos, ohne Werbung und ohne Käufe im Spiel."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Muss ich etwas herunterladen?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Nein. Das Spiel läuft direkt im Browser auf Handy, Tablet und Computer. Für Android gibt es zusätzlich eine App zum Herunterladen."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Kann ich Pláňov auf dem iPhone spielen?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ja, in Safari. Über Teilen → Zum Home-Bildschirm legst du es auf den Startbildschirm und öffnest es wie eine App."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Wird mein Spielstand gespeichert?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ja. Dein Dorf wird in der Cloud mit deinem Konto gespeichert, so kannst du zwischen Handy und Computer wechseln."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "In welchen Sprachen gibt es das Spiel?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Auf Tschechisch, Slowakisch, Englisch und Deutsch. Die Sprache wechselst du mit den Flaggen auf dem Anmeldebildschirm oder in den Einstellungen."
+   }
+  }
+ ]
+}
+</script>
+<style>
+@font-face { font-family: 'Lora'; src: url('/assets/lora.woff') format('woff'); font-weight: 400 700; font-display: swap; }
+@font-face { font-family: 'Poppins'; src: url('/assets/poppins-400.woff') format('woff'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Poppins'; src: url('/assets/poppins-500.woff') format('woff'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'Poppins'; src: url('/assets/poppins-700.woff') format('woff'); font-weight: 700; font-display: swap; }
+
+:root {
+  --noc: #101826;
+  --noc2: #152033;
+  --karta: #1c2a40;
+  --drevo: #6b4425;
+  --drevo-svetle: #9a6a3e;
+  --zlata: #ffd65a;
+  --zlata-tmava: #c98b1c;
+  --zelena: #5cc26a;
+  --zelena-tmava: #2e7d3c;
+  --cervena: #c0392b;
+  --text: #f4efe6;
+  --text2: #c9c2b4;
+  --stin: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --r: 18px;
+  --max: 1180px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--noc); color: var(--text);
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 17px; line-height: 1.6;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--zlata); }
+h1, h2, h3 { font-family: 'Lora', Georgia, serif; line-height: 1.15; margin: 0 0 .5em; }
+.obal { width: min(var(--max), 100% - 40px); margin-inline: auto; }
+
+/* ---------- horní lišta ---------- */
+.lista {
+  position: fixed; inset: 0 0 auto 0; z-index: 30;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px max(20px, env(safe-area-inset-left)) 12px max(20px, env(safe-area-inset-right));
+  transition: background .3s, box-shadow .3s;
+}
+.vanoce .lista:not(.pevna) { padding-top: 34px; }
+.lista.pevna { background: rgba(16, 24, 38, 0.92); box-shadow: 0 2px 18px rgba(0,0,0,.4); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.lista .znak { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--zlata); font-family: 'Lora', serif; font-weight: 700; font-size: 1.35rem; }
+.lista .znak img { width: 34px; height: 34px; border-radius: 9px; }
+.lista nav { display: flex; align-items: center; gap: 20px; }
+.lista nav a { color: var(--text); text-decoration: none; font-weight: 500; font-size: .95rem; opacity: .9; }
+.lista nav a:hover { opacity: 1; color: var(--zlata); }
+@media (max-width: 860px) { .lista nav a.odkaz { display: none; } }
+
+/* ---------- tlačítka ---------- */
+.tl {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 16px 34px; border-radius: 999px; border: 0; cursor: pointer;
+  font: 700 1.1rem/1 'Poppins', sans-serif; text-decoration: none; letter-spacing: .02em;
+  transition: transform .15s, box-shadow .15s, filter .15s;
+}
+.tl:hover { transform: translateY(-2px); filter: brightness(1.06); }
+.tl:active { transform: translateY(1px); }
+.tl-hrat { color: #fff; background: linear-gradient(#6fd67d, var(--zelena-tmava)); box-shadow: 0 6px 0 #1f5a2a, 0 12px 28px rgba(0,0,0,.45); text-shadow: 0 2px 0 rgba(0,0,0,.25); }
+.tl-hrat:hover { box-shadow: 0 8px 0 #1f5a2a, 0 16px 32px rgba(0,0,0,.5); }
+.tl-druhe { color: var(--text); background: rgba(255,255,255,.1); border: 2px solid rgba(255,255,255,.35); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.tl svg { width: 1.2em; height: 1.2em; flex: none; }
+
+/* ---------- úvod přes celou obrazovku ---------- */
+.uvod {
+  position: relative; min-height: 100vh; min-height: 100svh;
+  display: grid; place-items: center; text-align: center; overflow: hidden;
+  padding: 110px 20px 90px;
+}
+.uvod picture, .uvod .pozadi { position: absolute; inset: 0; }
+.uvod .pozadi img { width: 100%; height: 100%; object-fit: cover; object-position: center 60%; }
+.uvod::after {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at center, rgba(16,24,38,.25) 0%, rgba(16,24,38,.6) 70%),
+    linear-gradient(to bottom, rgba(16,24,38,.55) 0%, rgba(16,24,38,0) 30%, rgba(16,24,38,0) 60%, var(--noc) 100%);
+}
+.uvod .obsah { position: relative; z-index: 2; max-width: 820px; }
+.titul {
+  font-size: clamp(3.6rem, 13vw, 8.5rem); font-weight: 700; letter-spacing: .02em; margin: 0;
+  color: var(--zlata);
+  text-shadow: 0 3px 0 #7a4a12, 0 6px 0 #4a2a08, 0 12px 30px rgba(0,0,0,.6);
+}
+.podtitul { font-size: clamp(1.1rem, 2.6vw, 1.55rem); font-weight: 500; margin: .3em auto 1.6em; max-width: 30em; text-shadow: 0 2px 10px rgba(0,0,0,.8); }
+.tlacitka { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+.male { margin-top: 18px; font-size: .92rem; color: var(--text2); text-shadow: 0 1px 6px rgba(0,0,0,.9); }
+.odpocet {
+  display: none; margin: 0 auto 22px; padding: 8px 18px; width: fit-content; border-radius: 999px;
+  background: rgba(192, 57, 43, .85); color: #fff; font-weight: 700; font-size: .98rem; box-shadow: var(--stin);
+}
+.vanoce .odpocet { display: block; }
+.dolu { position: absolute; z-index: 2; left: 50%; bottom: 22px; transform: translateX(-50%); color: var(--text); opacity: .75; animation: houpani 2s ease-in-out infinite; }
+.dolu svg { width: 34px; height: 34px; }
+@keyframes houpani { 50% { transform: translate(-50%, 8px); } }
+@media (max-width: 560px) {
+  .tlacitka { flex-direction: column; align-items: stretch; }
+  .tl { width: 100%; }
+}
+
+/* ---------- vánoční světýlka a sníh ---------- */
+.svetylka { display: none; position: absolute; z-index: 3; top: 0; left: 0; right: 0; height: 40px; pointer-events: none; }
+.vanoce .svetylka { display: block; }
+.svetylka svg { width: 100%; height: 100%; }
+.svetylka .zarovka { animation: blik 1.6s ease-in-out infinite; }
+.svetylka .zarovka:nth-child(3n) { animation-delay: .5s; }
+.svetylka .zarovka:nth-child(3n+1) { animation-delay: 1s; }
+@keyframes blik { 50% { opacity: .35; } }
+#snih { position: fixed; inset: 0; z-index: 25; pointer-events: none; display: none; }
+.vanoce #snih { display: block; }
+
+/* ---------- sekce ---------- */
+section { padding: 90px 0; }
+.nadpis { text-align: center; margin-bottom: 46px; }
+.nadpis h2 { font-size: clamp(2rem, 4.5vw, 3rem); color: var(--zlata); }
+.nadpis p { color: var(--text2); max-width: 40em; margin: 0 auto; }
+
+.karty { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
+.karta {
+  background: linear-gradient(180deg, #22324c, var(--karta)); border-radius: var(--r);
+  padding: 26px 24px 28px; box-shadow: var(--stin); border: 1px solid rgba(255,255,255,.06);
+  display: flex; flex-direction: column; transition: transform .2s;
+}
+.karta:hover { transform: translateY(-4px); }
+.karta .obr { height: 170px; display: flex; align-items: flex-end; justify-content: center; margin-bottom: 18px; }
+.karta .obr img { max-height: 170px; width: auto; filter: drop-shadow(0 10px 12px rgba(0,0,0,.4)); }
+.karta .obr.dva img { max-height: 150px; }
+.karta .obr.dva img + img { margin-left: -24px; }
+.karta h3 { font-size: 1.4rem; color: var(--text); }
+.karta p { margin: 0; color: var(--text2); font-size: .98rem; }
+
+.stitky { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 44px; }
+.stitek { padding: 9px 18px; border-radius: 999px; background: rgba(255, 214, 90, .1); border: 1px solid rgba(255, 214, 90, .35); color: var(--zlata); font-weight: 500; font-size: .95rem; }
+
+/* pruh s budovami */
+.budovy { background: linear-gradient(180deg, var(--noc), #18253b 50%, var(--noc)); overflow: hidden; }
+.pas { display: flex; gap: 34px; align-items: flex-end; width: max-content; animation: jizda 60s linear infinite; padding: 10px 0 20px; }
+.pas img { height: 150px; width: auto; filter: drop-shadow(0 10px 10px rgba(0,0,0,.45)); }
+.budovy:hover .pas { animation-play-state: paused; }
+@keyframes jizda { to { transform: translateX(-50%); } }
+
+/* galerie */
+.galerie { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+.galerie a { display: block; border-radius: 14px; overflow: hidden; box-shadow: var(--stin); aspect-ratio: 16 / 9; background: var(--karta); cursor: zoom-in; }
+.galerie img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+.galerie a:hover img { transform: scale(1.04); }
+.galerie:empty { display: none; }
+
+/* jak začít */
+.kroky { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px; counter-reset: krok; }
+.krok { position: relative; padding: 30px 24px 26px 24px; border-radius: var(--r); background: rgba(255,255,255,.04); border: 1px dashed rgba(255,255,255,.18); }
+.krok::before {
+  counter-increment: krok; content: counter(krok);
+  position: absolute; top: -20px; left: 22px; width: 42px; height: 42px; border-radius: 50%;
+  display: grid; place-items: center; font: 700 1.2rem 'Lora', serif; color: #3b2508;
+  background: linear-gradient(var(--zlata), var(--zlata-tmava)); box-shadow: 0 4px 10px rgba(0,0,0,.4);
+}
+.krok h3 { font-size: 1.2rem; margin-top: .4em; }
+.krok p { margin: 0; color: var(--text2); font-size: .96rem; }
+
+/* starosta */
+.starosta { display: grid; grid-template-columns: 220px 1fr; gap: 34px; align-items: center; max-width: 900px; margin: 0 auto; }
+.starosta img { width: 220px; filter: drop-shadow(0 12px 16px rgba(0,0,0,.5)); }
+.bublina { position: relative; background: #f6efe1; color: #3a2a18; padding: 26px 30px; border-radius: 22px; box-shadow: var(--stin); font-size: 1.08rem; }
+.bublina::before { content: ''; position: absolute; left: -16px; top: 50%; transform: translateY(-50%); border: 16px solid transparent; border-left: 0; border-right-color: #f6efe1; }
+.bublina b { color: #8a4b0f; }
+@media (max-width: 680px) {
+  .starosta { grid-template-columns: 1fr; text-align: center; }
+  .starosta img { width: 160px; margin: 0 auto; }
+  .bublina::before { left: 50%; top: -16px; transform: translateX(-50%); border: 16px solid transparent; border-top: 0; border-bottom-color: #f6efe1; }
+}
+
+/* novinky */
+.novinky { max-width: 820px; margin: 0 auto; display: grid; gap: 16px; }
+.novinka { display: grid; grid-template-columns: 90px 1fr; gap: 18px; padding: 20px 22px; border-radius: 14px; background: var(--karta); }
+.novinka .verze { font: 700 1.1rem 'Lora', serif; color: var(--zlata); }
+.novinka ul { margin: 0; padding-left: 1.1em; color: var(--text2); }
+@media (max-width: 520px) { .novinka { grid-template-columns: 1fr; gap: 6px; } }
+
+/* texty pro vyhledávače */
+.texty { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+.texty h3 { color: var(--zlata); font-size: 1.25rem; }
+.texty p { color: var(--text2); margin: 0; }
+.vse { text-align: center; margin-top: 28px; color: var(--text2); }
+#proc { padding-top: 20px; }
+.vse a { font-weight: 500; }
+
+/* závěr */
+.zaver { text-align: center; background: radial-gradient(ellipse at center, #22324c 0%, var(--noc) 70%); }
+.zaver h2 { font-size: clamp(2rem, 5vw, 3.2rem); color: var(--zlata); }
+.zaver p { color: var(--text2); margin-bottom: 1.6em; }
+
+/* patička */
+footer { padding: 40px 0 calc(40px + env(safe-area-inset-bottom)); border-top: 1px solid rgba(255,255,255,.08); color: var(--text2); font-size: .92rem; }
+footer .obal { display: flex; flex-wrap: wrap; gap: 14px 30px; justify-content: space-between; align-items: center; }
+footer nav { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+footer a { color: var(--text2); }
+footer a:hover { color: var(--zlata); }
+
+/* zvětšený obrázek z galerie */
+#lupa { position: fixed; inset: 0; z-index: 50; display: none; place-items: center; background: rgba(5, 8, 14, .92); padding: 20px; cursor: zoom-out; }
+#lupa.otevrena { display: grid; }
+#lupa img { max-width: 100%; max-height: 100%; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,.6); }
+
+/* plynulé objevování při posunu */
+.objev { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+.objev.videt { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .pas, .dolu, .svetylka .zarovka { animation: none; }
+  .objev { opacity: 1; transform: none; transition: none; }
+}
+
+/* ---------- podstránky ---------- */
+.jazyky { display: flex; gap: 8px; align-items: center; margin-left: 6px; }
+.jazyky a { display: block; border-radius: 4px; line-height: 0; opacity: .75; outline: 2px solid transparent; transition: opacity .15s, outline-color .15s; }
+.jazyky a:hover { opacity: 1; }
+.jazyky a.aktivni { opacity: 1; outline-color: var(--zlata); }
+.jazyky img { width: 30px; height: 20px; border-radius: 3px; box-shadow: 0 1px 4px rgba(0,0,0,.5); }
+@media (max-width: 420px) { .jazyky img { width: 24px; height: 16px; } .jazyky { gap: 6px; } }
+.podstranka { padding: 96px 0 30px; }
+.zalozky { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 6px 0 30px; }
+.zalozky a { padding: 8px 18px; border-radius: 999px; text-decoration: none; color: var(--text); background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); font-weight: 500; font-size: .95rem; }
+.zalozky a:hover { color: var(--zlata); border-color: rgba(255,214,90,.5); }
+.zalozky a.aktivni { color: #3b2508; background: linear-gradient(var(--zlata), var(--zlata-tmava)); border-color: transparent; }
+.hlava { text-align: center; max-width: 820px; margin: 0 auto 34px; }
+.hlava h1 { font-size: clamp(2.1rem, 5.5vw, 3.4rem); color: var(--zlata); }
+.hlava p { color: var(--text2); }
+.skok { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 10px; }
+.skok a { color: var(--zlata); font-weight: 500; }
+.podstranka section { padding: 40px 0 20px; scroll-margin-top: 80px; }
+.podstranka h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); color: var(--zlata); text-align: center; }
+.mrizka { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 18px; }
+.polozka { background: linear-gradient(180deg, #22324c, var(--karta)); border-radius: 16px; padding: 18px 18px 16px; border: 1px solid rgba(255,255,255,.06); box-shadow: var(--stin); display: flex; flex-direction: column; scroll-margin-top: 90px; }
+.polozka .obr { height: 150px; display: flex; align-items: flex-end; justify-content: center; margin-bottom: 12px; }
+.polozka .obr img { max-height: 150px; width: auto; filter: drop-shadow(0 8px 10px rgba(0,0,0,.4)); }
+.polozka .obr .emoji { font-size: 76px; line-height: 1; padding-bottom: 14px; }
+.polozka h3 { font-size: 1.22rem; margin-bottom: .35em; }
+.polozka p { margin: 0 0 .6em; color: var(--text2); font-size: .95rem; }
+.polozka dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 3px 12px; font-size: .9rem; }
+.polozka dt { color: var(--text2); }
+.polozka dd { margin: 0; font-weight: 500; text-align: right; }
+.znacky { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.znacky span { font-size: .8rem; padding: 3px 10px; border-radius: 999px; background: rgba(255,214,90,.1); border: 1px solid rgba(255,214,90,.35); color: var(--zlata); }
+.ukoly { margin: 8px 0 0; padding-left: 1.1em; color: var(--text2); font-size: .88rem; }
+.clanek { max-width: 780px; margin: 0 auto; }
+.clanek h2 { text-align: left; margin-top: 1.6em; }
+.clanek h3 { color: var(--text); margin-top: 1.2em; }
+.clanek p, .clanek li { color: #e6e0d4; }
+.clanek li { margin-bottom: .35em; }
+.obsah-cl { background: var(--karta); border-radius: 14px; padding: 16px 22px; margin-bottom: 10px; }
+.obsah-cl ol { margin: .3em 0 0; padding-left: 1.3em; }
+.tip { background: rgba(92,194,106,.1); border-left: 4px solid var(--zelena); padding: 12px 16px; border-radius: 0 12px 12px 0; margin: 1em 0; }
+.clanek details { background: var(--karta); border-radius: 12px; padding: 12px 18px; margin-bottom: 10px; }
+.clanek summary { cursor: pointer; font-weight: 700; }
+.clanek details p { margin: .6em 0 .2em; }
+.zprava { background: var(--karta); border-radius: 16px; padding: 22px 26px; margin-bottom: 20px; }
+.zprava h2 { margin-top: 0 !important; font-size: 1.6rem; }
+.zprava .datum { color: var(--text2); font-size: .9rem; margin-bottom: .6em; }
+.polozka p.kdy { color: var(--text); font-size: .9rem; margin: 0; }
+.polozka p.kdy b { color: var(--text2); font-weight: 400; }
+@media (max-width: 560px) {
+  .mrizka { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .polozka { padding: 12px 11px; border-radius: 12px; }
+  .polozka .obr { height: 96px; margin-bottom: 8px; }
+  .polozka .obr img { max-height: 96px; }
+  .polozka .obr .emoji { font-size: 54px; padding-bottom: 6px; }
+  .polozka h3 { font-size: 1rem; }
+  .polozka p, .polozka p.kdy { font-size: .8rem; }
+  .polozka dl { grid-template-columns: 1fr; gap: 0; font-size: .8rem; }
+  .polozka dd { text-align: left; margin-bottom: 4px; }
+  .znacky span { font-size: .7rem; padding: 2px 7px; }
+}
+.vyzva { text-align: center; padding: 50px 0 60px !important; }
+.vyzva h2 { margin-bottom: .3em; }
+.vyzva p { color: var(--text2); margin-bottom: 1.4em; }
+</style>
+</head>
+<body>
+<header class="lista pevna" id="lista">
+  <a class="znak" href="/de/"><img src="/assets/icon-192.png" alt="" width="34" height="34">Pláňov</a>
+  <nav>
+    <a class="odkaz" href="/de/lexikon/">Lexikon</a>
+    <a class="odkaz" href="/de/anleitung/">Anleitung</a>
+    <a class="odkaz" href="/de/neuigkeiten/">Neuigkeiten</a>
+    <div class="jazyky">
+      <a href="/navod/" hreflang="cs" lang="cs" title="Čeština" onclick="try{localStorage.setItem('planov-lang','cs')}catch(e){}"><img src="/assets/vlajky/cs.svg" alt="Čeština" width="30" height="20"></a>
+      <a href="/sk/navod/" hreflang="sk" lang="sk" title="Slovenčina" onclick="try{localStorage.setItem('planov-lang','sk')}catch(e){}"><img src="/assets/vlajky/sk.svg" alt="Slovenčina" width="30" height="20"></a>
+      <a href="/en/guide/" hreflang="en" lang="en" title="English" onclick="try{localStorage.setItem('planov-lang','en')}catch(e){}"><img src="/assets/vlajky/en.svg" alt="English" width="30" height="20"></a>
+      <a href="/de/anleitung/" hreflang="de" lang="de" class="aktivni" title="Deutsch" onclick="try{localStorage.setItem('planov-lang','de')}catch(e){}"><img src="/assets/vlajky/de.svg" alt="Deutsch" width="30" height="20"></a>
+    </div>
+  </nav>
+</header>
+
+<main class="podstranka">
+  <div class="obal">
+<nav class="zalozky" aria-label="Navigation">
+  <a href="/de/">Start</a>
+  <a href="/de/lexikon/">Lexikon</a>
+  <a href="/de/anleitung/" class="aktivni" aria-current="page">Anleitung</a>
+  <a href="/de/neuigkeiten/">Neuigkeiten</a>
+</nav>
+<div class="hlava"><h1>Anleitung: so spielst du Pláňov</h1><p>Pláňov ist ein kostenloses Aufbauspiel, das du direkt im Browser auf dem Handy oder PC spielst – ohne Download. Hier findest du alles, was du für den Start wissen musst, und ein paar Tipps, wie dein Dorf schneller wächst.</p></div><article class="clanek">
+<div class="obsah-cl"><b>Inhalt</b><ol><li><a href="#zacatek">So fängst du an</a></li><li><a href="#staveni">Bauen und Geld</a></li><li><a href="#obyvatele">Bewohner und ihre Aufgaben</a></li><li><a href="#spokojenost">Zufriedenheit und Dekorationen</a></li><li><a href="#vylepseni">Gebäude ausbauen</a></li><li><a href="#pozemky">Grundstück erweitern</a></li><li><a href="#urovne">Stufen, XP und Abzeichen</a></li><li><a href="#pratele">Freunde und Besuche</a></li><li><a href="#vanoce">Weihnachten in Pláňov</a></li><li><a href="#stadion">Fußballstadion</a></li><li><a href="#tipy">Tipps und Tricks</a></li></ol></div>
+<section id="zacatek"><h2>So fängst du an</h2><p>Klick auf <a href="/hra/?lang=de">Kostenlos spielen</a>, denk dir einen Nick und ein Passwort aus und schon bist du im Spiel. Gleich zu Beginn begrüßt dich Bürgermeister <b>Bodo Köpfle</b> und zeigt dir das Wichtigste. Falls du etwas vergisst, findest du die Hilfe jederzeit wieder in den <b>Einstellungen</b>.</p><p>Oben links siehst du immer deine aktuelle <b>Aufgabe</b>. Die Aufgaben führen dich Schritt für Schritt durchs Spiel, und für jede bekommst du Coins und XP. Weißt du nicht weiter, tippe auf die Aufgabe – dann siehst du einen Hinweis.</p></section>
+<section id="staveni"><h2>Bauen und Geld</h2><p>Gebäude, Wege und Dekorationen kaufst du im <b>LADEN</b>. Eine grüne Karte heißt, dass du genug Coins hast, eine rote, dass es noch nicht reicht. Setz das Gebäude auf einen freien Platz, dreh es bei Bedarf mit <b>DREHEN</b> und bestätige.</p><p>Häuser brauchen eine Weile zum Bauen und verdienen dann Geld. Erscheint über einem Haus eine Münze, tippe darauf – das Geld gehört dir. Mit <b>ALLES EINSAMMELN</b> sammelst du bei allen Häusern auf einmal ein.</p><div class="tip">💡 Jedes weitere gleiche Haus ist 30 % teurer. Es lohnt sich also, verschiedene Gebäude zu bauen statt immer dasselbe.</div><p>Bewohner laufen nur auf Wegen, also bau Wege und Gehwege zwischen den Häusern. Wege, Gehwege und den Fluss kannst du in einer Reihe legen – tippe einfach auf den Pfeil neben dem letzten Stück, und das nächste wird in diese Richtung angefügt.</p></section>
+<section id="obyvatele"><h2>Bewohner und ihre Aufgaben</h2><p>Der Sturm hat die Bewohner von Pláňov fortgeweht, doch mit neuen Gebäuden kehren sie nach und nach zurück. Jeder hat seinen eigenen Charakter und seine Arbeiten. Tippe auf einen Bewohner, gib ihm eine Aufgabe, und wenn du über ihm ein Ausrufezeichen siehst, tippe noch einmal und hol dir die Belohnung.</p><div class="tip">💡 Bevor du schlafen oder zur Arbeit gehst, schick die Bewohner auf die längsten Aufgaben. Längere Arbeit bringt mehr, und du musst nicht beim Spiel sitzen.</div><p>Welches Gebäude welchen Bewohner zurückbringt, steht im <a href="/de/lexikon/#obyvatele">Bewohner-Lexikon</a>.</p></section>
+<section id="spokojenost"><h2>Zufriedenheit und Dekorationen</h2><p>Dekorationen wie Bäume, Bänke, Blumenbeete oder ein Brunnen erhöhen die <b>Zufriedenheit</b> der Stadt. Je zufriedener Pláňov ist, desto mehr verdienen alle Häuser – der Bonus kann bis zu <b>+50 %</b> Einnahmen betragen.</p><div class="tip">💡 Die Zufriedenheit wird durch die Zahl der Häuser geteilt. Baust du viele Häuser, stell auch ein paar Dekorationen dazu, damit der Bonus nicht sinkt.</div></section>
+<section id="vylepseni"><h2>Gebäude ausbauen</h2><p>Häuser lassen sich bis Stufe 3 ausbauen. Auf Stufe 2 verdienen sie 1,5-mal so viel, auf Stufe 3 2,2-mal so viel. Den Ausbau findest du, wenn du auf das Gebäude tippst. Du kannst ein Gebäude auch verkaufen und bekommst die Hälfte des investierten Geldes zurück.</p></section>
+<section id="pozemky"><h2>Grundstück erweitern</h2><p>Wenn der Platz knapp wird, tippe auf ein <b>ZU VERKAUFEN</b>-Schild am Stadtrand. Jede Parzelle hat 8 × 8 Felder. Weitere Parzellen sind teurer und werden auf höheren Stufen freigeschaltet.</p></section>
+<section id="urovne"><h2>Stufen, XP und Abzeichen</h2><p>Fürs Bauen, Geldeinsammeln und die Arbeit der Bewohner bekommst du XP. Jede Stufe schaltet etwas Neues frei – Gebäude, Bewohner und Dekorationen. Die höchste Stufe ist 200.</p><p>Für Erfolge sammelst du <b>Abzeichen</b> in Bronze, Silber und Gold, mit einer Belohnung für jede Stufe. Alle findest du im <a href="/de/lexikon/#odznaky">Abzeichen-Lexikon</a>.</p></section>
+<section id="pratele"><h2>Freunde und Besuche</h2><p>Füge im Menü Freunde über ihren Nick hinzu. Schau in ihre Dörfer, hol dir Ideen und vergleicht, wessen Pláňov schöner ist.</p></section>
+<section id="vanoce"><h2>Weihnachten in Pláňov</h2><p>Im Dezember wird Pláňov zum Weihnachtsdorf. Vom 1. bis 24. Dezember öffnet sich jeden Tag ein Türchen des <b>Adventskalenders</b> mit einem Geschenk – an Heiligabend wartet ein großer Weihnachtsbaum für den Dorfplatz. Auf dem <b>Weihnachtsmarkt</b> gibt es Schlitten, Rentier, Krippe, Eisbahn und weitere Dekorationen, die es sonst nirgends gibt. Und überall in der Stadt liegen Schneebälle – sammle sie ein, es lohnt sich.</p></section>
+<section id="stadion"><h2>Fußballstadion</h2><p>Ab Stufe 10 kannst du ein Fußballstadion bauen und eine Mannschaft der tschechischen Liga wählen, der du die Daumen drückst. Für die Ergebnisse ihrer echten Spiele bekommst du Belohnungen.</p></section>
+<section id="tipy"><h2>Tipps und Tricks</h2><ul><li>Spiel auf Handy und PC – dein Dorf wird in der Cloud gespeichert, melde dich einfach mit demselben Konto an.</li><li>Leg das Spiel auf den Startbildschirm (Safari: <b>Teilen → Zum Home-Bildschirm</b>, Chrome: <b>⋮ → Zum Startbildschirm hinzufügen</b>). Dann öffnet es sich wie eine App.</li><li>Bau am Anfang günstige Häuser, die schnell fertig sind – so erreichst du rasch die ersten Stufen.</li><li>Sammle regelmäßig Geld ein. Ein Haus, bei dem du nicht einsammelst, verdient nicht weiter.</li><li>Schau bei den <a href="/de/neuigkeiten/">Neuigkeiten</a> vorbei – jede Version bringt Neues.</li></ul></section>
+<section id="faq"><h2>Häufige Fragen</h2><details><summary>Ist Pláňov kostenlos?</summary><p>Ja. Pláňov ist komplett kostenlos, ohne Werbung und ohne Käufe im Spiel.</p></details><details><summary>Muss ich etwas herunterladen?</summary><p>Nein. Das Spiel läuft direkt im Browser auf Handy, Tablet und Computer. Für Android gibt es zusätzlich eine App zum Herunterladen.</p></details><details><summary>Kann ich Pláňov auf dem iPhone spielen?</summary><p>Ja, in Safari. Über Teilen → Zum Home-Bildschirm legst du es auf den Startbildschirm und öffnest es wie eine App.</p></details><details><summary>Wird mein Spielstand gespeichert?</summary><p>Ja. Dein Dorf wird in der Cloud mit deinem Konto gespeichert, so kannst du zwischen Handy und Computer wechseln.</p></details><details><summary>In welchen Sprachen gibt es das Spiel?</summary><p>Auf Tschechisch, Slowakisch, Englisch und Deutsch. Die Sprache wechselst du mit den Flaggen auf dem Anmeldebildschirm oder in den Einstellungen.</p></details></section>
+</article>
+<section class="vyzva">
+  <h2>Willst du es selbst sehen?</h2>
+  <p>Pláňov ist kostenlos, ohne Werbung und ohne Download. Einfach klicken und spielen.</p>
+  <a class="tl tl-hrat" href="/hra/?lang=de"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>KOSTENLOS SPIELEN</a>
+</section>
+
+  </div>
+</main>
+<footer>
+  <div class="obal">
+    <div>© 2026 Pláňov · Erstellt von <b>Aleš Jaroš</b></div>
+    <nav>
+      <a href="/hra/?lang=de">Spielen</a>
+      <a href="/de/lexikon/">Lexikon</a>
+      <a href="/de/anleitung/">Anleitung</a>
+      <a href="/de/neuigkeiten/">Neuigkeiten</a>
+      <a href="/de/datenschutz.html">Datenschutz</a>
+      <a href="https://vapik.itch.io/planov" rel="noopener">Pláňov auf itch.io</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

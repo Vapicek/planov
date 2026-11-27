@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pláňov Wiki – all buildings, residents and badges</title>
+<meta name="description" content="Every building, decoration, resident and badge in the village-building game Pláňov: prices, income, unlock levels and how to bring new residents back.">
+<link rel="canonical" href="https://planov.cz/en/wiki/">
+<link rel="alternate" hreflang="cs" href="https://planov.cz/encyklopedie/">
+<link rel="alternate" hreflang="sk" href="https://planov.cz/sk/encyklopedia/">
+<link rel="alternate" hreflang="en" href="https://planov.cz/en/wiki/">
+<link rel="alternate" hreflang="de" href="https://planov.cz/de/lexikon/">
+<link rel="alternate" hreflang="x-default" href="https://planov.cz/encyklopedie/">
+<meta name="theme-color" content="#152033">
+<meta name="author" content="Aleš Jaroš">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Pláňov">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://planov.cz/en/wiki/">
+<meta property="og:title" content="Pláňov Wiki – all buildings, residents and badges">
+<meta property="og:description" content="Every building, decoration, resident and badge in the village-building game Pláňov: prices, income, unlock levels and how to bring new residents back.">
+<meta property="og:image" content="https://planov.cz/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Pláňov",
+   "item": "https://planov.cz/en/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Wiki",
+   "item": "https://planov.cz/en/wiki/"
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "CollectionPage",
+ "name": "Pláňov Wiki – all buildings, residents and badges",
+ "description": "Every building, decoration, resident and badge in the village-building game Pláňov: prices, income, unlock levels and how to bring new residents back.",
+ "inLanguage": "en",
+ "url": "https://planov.cz/en/wiki/",
+ "about": {
+  "@type": "VideoGame",
+  "name": "Pláňov",
+  "url": "https://planov.cz/en/"
+ }
+}
+</script>
+<style>
+@font-face { font-family: 'Lora'; src: url('/assets/lora.woff') format('woff'); font-weight: 400 700; font-display: swap; }
+@font-face { font-family: 'Poppins'; src: url('/assets/poppins-400.woff') format('woff'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Poppins'; src: url('/assets/poppins-500.woff') format('woff'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'Poppins'; src: url('/assets/poppins-700.woff') format('woff'); font-weight: 700; font-display: swap; }
+
+:root {
+  --noc: #101826;
+  --noc2: #152033;
+  --karta: #1c2a40;
+  --drevo: #6b4425;
+  --drevo-svetle: #9a6a3e;
+  --zlata: #ffd65a;
+  --zlata-tmava: #c98b1c;
+  --zelena: #5cc26a;
+  --zelena-tmava: #2e7d3c;
+  --cervena: #c0392b;
+  --text: #f4efe6;
+  --text2: #c9c2b4;
+  --stin: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --r: 18px;
+  --max: 1180px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--noc); color: var(--text);
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 17px; line-height: 1.6;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--zlata); }
+h1, h2, h3 { font-family: 'Lora', Georgia, serif; line-height: 1.15; margin: 0 0 .5em; }
+.obal { width: min(var(--max), 100% - 40px); margin-inline: auto; }
+
+/* ---------- horní lišta ---------- */
+.lista {
+  position: fixed; inset: 0 0 auto 0; z-index: 30;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px max(20px, env(safe-area-inset-left)) 12px max(20px, env(safe-area-inset-right));
+  transition: background .3s, box-shadow .3s;
+}
+.vanoce .lista:not(.pevna) { padding-top: 34px; }
+.lista.pevna { background: rgba(16, 24, 38, 0.92); box-shadow: 0 2px 18px rgba(0,0,0,.4); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.lista .znak { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--zlata); font-family: 'Lora', serif; font-weight: 700; font-size: 1.35rem; }
+.lista .znak img { width: 34px; height: 34px; border-radius: 9px; }
+.lista nav { display: flex; align-items: center; gap: 20px; }
+.lista nav a { color: var(--text); text-decoration: none; font-weight: 500; font-size: .95rem; opacity: .9; }
+.lista nav a:hover { opacity: 1; color: var(--zlata); }
+@media (max-width: 860px) { .lista nav a.odkaz { display: none; } }
+
+/* ---------- tlačítka ---------- */
+.tl {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 16px 34px; border-radius: 999px; border: 0; cursor: pointer;
+  font: 700 1.1rem/1 'Poppins', sans-serif; text-decoration: none; letter-spacing: .02em;
+  transition: transform .15s, box-shadow .15s, filter .15s;
+}
+.tl:hover { transform: translateY(-2px); filter: brightness(1.06); }
+.tl:active { transform: translateY(1px); }
+.tl-hrat { color: #fff; background: linear-gradient(#6fd67d, var(--zelena-tmava)); box-shadow: 0 6px 0 #1f5a2a, 0 12px 28px rgba(0,0,0,.45); text-shadow: 0 2px 0 rgba(0,0,0,.25); }
+.tl-hrat:hover { box-shadow: 0 8px 0 #1f5a2a, 0 16px 32px rgba(0,0,0,.5); }
+.tl-druhe { color: var(--text); background: rgba(255,255,255,.1); border: 2px solid rgba(255,255,255,.35); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.tl svg { width: 1.2em; height: 1.2em; flex: none; }
+
+/* ---------- úvod přes celou obrazovku ---------- */
+.uvod {
+  position: relative; min-height: 100vh; min-height: 100svh;
+  display: grid; place-items: center; text-align: center; overflow: hidden;
+  padding: 110px 20px 90px;
+}
+.uvod picture, .uvod .pozadi { position: absolute; inset: 0; }
+.uvod .pozadi img { width: 100%; height: 100%; object-fit: cover; object-position: center 60%; }
+.uvod::after {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at center, rgba(16,24,38,.25) 0%, rgba(16,24,38,.6) 70%),
+    linear-gradient(to bottom, rgba(16,24,38,.55) 0%, rgba(16,24,38,0) 30%, rgba(16,24,38,0) 60%, var(--noc) 100%);
+}
+.uvod .obsah { position: relative; z-index: 2; max-width: 820px; }
+.titul {
+  font-size: clamp(3.6rem, 13vw, 8.5rem); font-weight: 700; letter-spacing: .02em; margin: 0;
+  color: var(--zlata);
+  text-shadow: 0 3px 0 #7a4a12, 0 6px 0 #4a2a08, 0 12px 30px rgba(0,0,0,.6);
+}
+.podtitul { font-size: clamp(1.1rem, 2.6vw, 1.55rem); font-weight: 500; margin: .3em auto 1.6em; max-width: 30em; text-shadow: 0 2px 10px rgba(0,0,0,.8); }
+.tlacitka { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+.male { margin-top: 18px; font-size: .92rem; color: var(--text2); text-shadow: 0 1px 6px rgba(0,0,0,.9); }
+.odpocet {
+  display: none; margin: 0 auto 22px; padding: 8px 18px; width: fit-content; border-radius: 999px;
+  background: rgba(192, 57, 43, .85); color: #fff; font-weight: 700; font-size: .98rem; box-shadow: var(--stin);
+}
+.vanoce .odpocet { display: block; }
+.dolu { position: absolute; z-index: 2; left: 50%; bottom: 22px; transform: translateX(-50%); color: var(--text); opacity: .75; animation: houpani 2s ease-in-out infinite; }
+.dolu svg { width: 34px; height: 34px; }
+@keyframes houpani { 50% { transform: translate(-50%, 8px); } }
+@media (max-width: 560px) {
+  .tlacitka { flex-direction: column; align-items: stretch; }
+  .tl { width: 100%; }
+}
+
+/* ---------- vánoční světýlka a sníh ---------- */
+.svetylka { display: none; position: absolute; z-index: 3; top: 0; left: 0; right: 0; height: 40px; pointer-events: none; }
+.vanoce .svetylka { display: block; }
+.svetylka svg { width: 100%; height: 100%; }
+.svetylka .zarovka { animation: blik 1.6s ease-in-out infinite; }
+.svetylka .zarovka:nth-child(3n) { animation-delay: .5s; }
+.svetylka .zarovka:nth-child(3n+1) { animation-delay: 1s; }
+@keyframes blik { 50% { opacity: .35; } }
+#snih { position: fixed; inset: 0; z-index: 25; pointer-events: none; display: none; }
+.vanoce #snih { display: block; }
+
+/* ---------- sekce ---------- */
+section { padding: 90px 0; }
+.nadpis { text-align: center; margin-bottom: 46px; }
+.nadpis h2 { font-size: clamp(2rem, 4.5vw, 3rem); color: var(--zlata); }
+.nadpis p { color: var(--text2); max-width: 40em; margin: 0 auto; }
+
+.karty { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
+.karta {
+  background: linear-gradient(180deg, #22324c, var(--karta)); border-radius: var(--r);
+  padding: 26px 24px 28px; box-shadow: var(--stin); border: 1px solid rgba(255,255,255,.06);
+  display: flex; flex-direction: column; transition: transform .2s;
+}
+.karta:hover { transform: translateY(-4px); }
+.karta .obr { height: 170px; display: flex; align-items: flex-end; justify-content: center; margin-bottom: 18px; }
+.karta .obr img { max-height: 170px; width: auto; filter: drop-shadow(0 10px 12px rgba(0,0,0,.4)); }
+.karta .obr.dva img { max-height: 150px; }
+.karta .obr.dva img + img { margin-left: -24px; }
+.karta h3 { font-size: 1.4rem; color: var(--text); }
+.karta p { margin: 0; color: var(--text2); font-size: .98rem; }
+
+.stitky { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 44px; }
+.stitek { padding: 9px 18px; border-radius: 999px; background: rgba(255, 214, 90, .1); border: 1px solid rgba(255, 214, 90, .35); color: var(--zlata); font-weight: 500; font-size: .95rem; }
+
+/* pruh s budovami */
+.budovy { background: linear-gradient(180deg, var(--noc), #18253b 50%, var(--noc)); overflow: hidden; }
+.pas { display: flex; gap: 34px; align-items: flex-end; width: max-content; animation: jizda 60s linear infinite; padding: 10px 0 20px; }
+.pas img { height: 150px; width: auto; filter: drop-shadow(0 10px 10px rgba(0,0,0,.45)); }
+.budovy:hover .pas { animation-play-state: paused; }
+@keyframes jizda { to { transform: translateX(-50%); } }
+
+/* galerie */
+.galerie { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+.galerie a { display: block; border-radius: 14px; overflow: hidden; box-shadow: var(--stin); aspect-ratio: 16 / 9; background: var(--karta); cursor: zoom-in; }
+.galerie img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+.galerie a:hover img { transform: scale(1.04); }
+.galerie:empty { display: none; }
+
+/* jak začít */
+.kroky { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px; counter-reset: krok; }
+.krok { position: relative; padding: 30px 24px 26px 24px; border-radius: var(--r); background: rgba(255,255,255,.04); border: 1px dashed rgba(255,255,255,.18); }
+.krok::before {
+  counter-increment: krok; content: counter(krok);
+  position: absolute; top: -20px; left: 22px; width: 42px; height: 42px; border-radius: 50%;
+  display: grid; place-items: center; font: 700 1.2rem 'Lora', serif; color: #3b2508;
+  background: linear-gradient(var(--zlata), var(--zlata-tmava)); box-shadow: 0 4px 10px rgba(0,0,0,.4);
+}
+.krok h3 { font-size: 1.2rem; margin-top: .4em; }
+.krok p { margin: 0; color: var(--text2); font-size: .96rem; }
+
+/* starosta */
+.starosta { display: grid; grid-template-columns: 220px 1fr; gap: 34px; align-items: center; max-width: 900px; margin: 0 auto; }
+.starosta img { width: 220px; filter: drop-shadow(0 12px 16px rgba(0,0,0,.5)); }
+.bublina { position: relative; background: #f6efe1; color: #3a2a18; padding: 26px 30px; border-radius: 22px; box-shadow: var(--stin); font-size: 1.08rem; }
+.bublina::before { content: ''; position: absolute; left: -16px; top: 50%; transform: translateY(-50%); border: 16px solid transparent; border-left: 0; border-right-color: #f6efe1; }
+.bublina b { color: #8a4b0f; }
+@media (max-width: 680px) {
+  .starosta { grid-template-columns: 1fr; text-align: center; }
+  .starosta img { width: 160px; margin: 0 auto; }
+  .bublina::before { left: 50%; top: -16px; transform: translateX(-50%); border: 16px solid transparent; border-top: 0; border-bottom-color: #f6efe1; }
+}
+
+/* novinky */
+.novinky { max-width: 820px; margin: 0 auto; display: grid; gap: 16px; }
+.novinka { display: grid; grid-template-columns: 90px 1fr; gap: 18px; padding: 20px 22px; border-radius: 14px; background: var(--karta); }
+.novinka .verze { font: 700 1.1rem 'Lora', serif; color: var(--zlata); }
+.novinka ul { margin: 0; padding-left: 1.1em; color: var(--text2); }
+@media (max-width: 520px) { .novinka { grid-template-columns: 1fr; gap: 6px; } }
+
+/* texty pro vyhledávače */
+.texty { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+.texty h3 { color: var(--zlata); font-size: 1.25rem; }
+.texty p { color: var(--text2); margin: 0; }
+.vse { text-align: center; margin-top: 28px; color: var(--text2); }
+#proc { padding-top: 20px; }
+.vse a { font-weight: 500; }
+
+/* závěr */
+.zaver { text-align: center; background: radial-gradient(ellipse at center, #22324c 0%, var(--noc) 70%); }
+.zaver h2 { font-size: clamp(2rem, 5vw, 3.2rem); color: var(--zlata); }
+.zaver p { color: var(--text2); margin-bottom: 1.6em; }
+
+/* patička */
+footer { padding: 40px 0 calc(40px + env(safe-area-inset-bottom)); border-top: 1px solid rgba(255,255,255,.08); color: var(--text2); font-size: .92rem; }
+footer .obal { display: flex; flex-wrap: wrap; gap: 14px 30px; justify-content: space-between; align-items: center; }
+footer nav { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+footer a { color: var(--text2); }
+footer a:hover { color: var(--zlata); }
+
+/* zvětšený obrázek z galerie */
+#lupa { position: fixed; inset: 0; z-index: 50; display: none; place-items: center; background: rgba(5, 8, 14, .92); padding: 20px; cursor: zoom-out; }
+#lupa.otevrena { display: grid; }
+#lupa img { max-width: 100%; max-height: 100%; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,.6); }
+
+/* plynulé objevování při posunu */
+.objev { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+.objev.videt { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .pas, .dolu, .svetylka .zarovka { animation: none; }
+  .objev { opacity: 1; transform: none; transition: none; }
+}
+
+/* ---------- podstránky ---------- */
+.jazyky { display: flex; gap: 8px; align-items: center; margin-left: 6px; }
+.jazyky a { display: block; border-radius: 4px; line-height: 0; opacity: .75; outline: 2px solid transparent; transition: opacity .15s, outline-color .15s; }
+.jazyky a:hover { opacity: 1; }
+.jazyky a.aktivni { opacity: 1; outline-color: var(--zlata); }
+.jazyky img { width: 30px; height: 20px; border-radius: 3px; box-shadow: 0 1px 4px rgba(0,0,0,.5); }
+@media (max-width: 420px) { .jazyky img { width: 24px; height: 16px; } .jazyky { gap: 6px; } }
+.podstranka { padding: 96px 0 30px; }
+.zalozky { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 6px 0 30px; }
+.zalozky a { padding: 8px 18px; border-radius: 999px; text-decoration: none; color: var(--text); background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); font-weight: 500; font-size: .95rem; }
+.zalozky a:hover { color: var(--zlata); border-color: rgba(255,214,90,.5); }
+.zalozky a.aktivni { color: #3b2508; background: linear-gradient(var(--zlata), var(--zlata-tmava)); border-color: transparent; }
+.hlava { text-align: center; max-width: 820px; margin: 0 auto 34px; }
+.hlava h1 { font-size: clamp(2.1rem, 5.5vw, 3.4rem); color: var(--zlata); }
+.hlava p { color: var(--text2); }
+.skok { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 10px; }
+.skok a { color: var(--zlata); font-weight: 500; }
+.podstranka section { padding: 40px 0 20px; scroll-margin-top: 80px; }
+.podstranka h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); color: var(--zlata); text-align: center; }
+.mrizka { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 18px; }
+.polozka { background: linear-gradient(180deg, #22324c, var(--karta)); border-radius: 16px; padding: 18px 18px 16px; border: 1px solid rgba(255,255,255,.06); box-shadow: var(--stin); display: flex; flex-direction: column; scroll-margin-top: 90px; }
+.polozka .obr { height: 150px; display: flex; align-items: flex-end; justify-content: center; margin-bottom: 12px; }
+.polozka .obr img { max-height: 150px; width: auto; filter: drop-shadow(0 8px 10px rgba(0,0,0,.4)); }
+.polozka .obr .emoji { font-size: 76px; line-height: 1; padding-bottom: 14px; }
+.polozka h3 { font-size: 1.22rem; margin-bottom: .35em; }
+.polozka p { margin: 0 0 .6em; color: var(--text2); font-size: .95rem; }
+.polozka dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 3px 12px; font-size: .9rem; }
+.polozka dt { color: var(--text2); }
+.polozka dd { margin: 0; font-weight: 500; text-align: right; }
+.znacky { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.znacky span { font-size: .8rem; padding: 3px 10px; border-radius: 999px; background: rgba(255,214,90,.1); border: 1px solid rgba(255,214,90,.35); color: var(--zlata); }
+.ukoly { margin: 8px 0 0; padding-left: 1.1em; color: var(--text2); font-size: .88rem; }
+.clanek { max-width: 780px; margin: 0 auto; }
+.clanek h2 { text-align: left; margin-top: 1.6em; }
+.clanek h3 { color: var(--text); margin-top: 1.2em; }
+.clanek p, .clanek li { color: #e6e0d4; }
+.clanek li { margin-bottom: .35em; }
+.obsah-cl { background: var(--karta); border-radius: 14px; padding: 16px 22px; margin-bottom: 10px; }
+.obsah-cl ol { margin: .3em 0 0; padding-left: 1.3em; }
+.tip { background: rgba(92,194,106,.1); border-left: 4px solid var(--zelena); padding: 12px 16px; border-radius: 0 12px 12px 0; margin: 1em 0; }
+.clanek details { background: var(--karta); border-radius: 12px; padding: 12px 18px; margin-bottom: 10px; }
+.clanek summary { cursor: pointer; font-weight: 700; }
+.clanek details p { margin: .6em 0 .2em; }
+.zprava { background: var(--karta); border-radius: 16px; padding: 22px 26px; margin-bottom: 20px; }
+.zprava h2 { margin-top: 0 !important; font-size: 1.6rem; }
+.zprava .datum { color: var(--text2); font-size: .9rem; margin-bottom: .6em; }
+.polozka p.kdy { color: var(--text); font-size: .9rem; margin: 0; }
+.polozka p.kdy b { color: var(--text2); font-weight: 400; }
+@media (max-width: 560px) {
+  .mrizka { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .polozka { padding: 12px 11px; border-radius: 12px; }
+  .polozka .obr { height: 96px; margin-bottom: 8px; }
+  .polozka .obr img { max-height: 96px; }
+  .polozka .obr .emoji { font-size: 54px; padding-bottom: 6px; }
+  .polozka h3 { font-size: 1rem; }
+  .polozka p, .polozka p.kdy { font-size: .8rem; }
+  .polozka dl { grid-template-columns: 1fr; gap: 0; font-size: .8rem; }
+  .polozka dd { text-align: left; margin-bottom: 4px; }
+  .znacky span { font-size: .7rem; padding: 2px 7px; }
+}
+.vyzva { text-align: center; padding: 50px 0 60px !important; }
+.vyzva h2 { margin-bottom: .3em; }
+.vyzva p { color: var(--text2); margin-bottom: 1.4em; }
+</style>
+</head>
+<body>
+<header class="lista pevna" id="lista">
+  <a class="znak" href="/en/"><img src="/assets/icon-192.png" alt="" width="34" height="34">Pláňov</a>
+  <nav>
+    <a class="odkaz" href="/en/wiki/">Wiki</a>
+    <a class="odkaz" href="/en/guide/">Guide</a>
+    <a class="odkaz" href="/en/news/">News</a>
+    <div class="jazyky">
+      <a href="/encyklopedie/" hreflang="cs" lang="cs" title="Čeština" onclick="try{localStorage.setItem('planov-lang','cs')}catch(e){}"><img src="/assets/vlajky/cs.svg" alt="Čeština" width="30" height="20"></a>
+      <a href="/sk/encyklopedia/" hreflang="sk" lang="sk" title="Slovenčina" onclick="try{localStorage.setItem('planov-lang','sk')}catch(e){}"><img src="/assets/vlajky/sk.svg" alt="Slovenčina" width="30" height="20"></a>
+      <a href="/en/wiki/" hreflang="en" lang="en" class="aktivni" title="English" onclick="try{localStorage.setItem('planov-lang','en')}catch(e){}"><img src="/assets/vlajky/en.svg" alt="English" width="30" height="20"></a>
+      <a href="/de/lexikon/" hreflang="de" lang="de" title="Deutsch" onclick="try{localStorage.setItem('planov-lang','de')}catch(e){}"><img src="/assets/vlajky/de.svg" alt="Deutsch" width="30" height="20"></a>
+    </div>
+  </nav>
+</header>
+
+<main class="podstranka">
+  <div class="obal">
+<nav class="zalozky" aria-label="Navigation">
+  <a href="/en/">Home</a>
+  <a href="/en/wiki/" class="aktivni" aria-current="page">Wiki</a>
+  <a href="/en/guide/">Guide</a>
+  <a href="/en/news/">News</a>
+</nav>
+<div class="hlava"><h1>Pláňov Wiki</h1><p>Everything you can find in Pláňov: the buildings and decorations you can build, the residents who return to the village and the badges you can collect. The numbers come straight from the game – prices, income, unlock levels and how to bring back every resident.</p><p><b>69 buildings · 40 residents · 14 badges</b></p></div>
+<div class="skok"><a href="#budovy">Buildings</a> · <a href="#ozdoby">Decorations and roads</a> · <a href="#vanoce">Christmas items</a> · <a href="#obyvatele">Residents</a> · <a href="#odznaky">Badges</a></div>
+<section id="budovy"><h2>Buildings</h2><div class="mrizka"><article class="polozka" id="chaloupka"><div class="obr"><img src="/assets/enc/b-chaloupka.webp" alt="Cottage" loading="lazy" width="275" height="300"></div><h3>Cottage</h3><dl><dt>Price</dt><dd>100 Coin</dd><dt>Size</dt><dd>2 × 2</dd><dt>Income</dt><dd>10 Coin / 1 min</dd><dt>Build time</dt><dd>2 min</dd></dl></article><article class="polozka" id="pekarna"><div class="obr"><img src="/assets/enc/b-pekarna.webp" alt="Bakery" loading="lazy" width="279" height="300"></div><h3>Bakery</h3><dl><dt>Price</dt><dd>250 Coin</dd><dt>From level</dt><dd>2</dd><dt>Size</dt><dd>2 × 2</dd><dt>Income</dt><dd>25 Coin / 3 min</dd><dt>Build time</dt><dd>10 min</dd></dl></article><article class="polozka" id="smisene"><div class="obr"><img src="/assets/enc/b-smisene.webp" alt="General store" loading="lazy" width="300" height="236"></div><h3>General store</h3><dl><dt>Price</dt><dd>450 Coin</dd><dt>From level</dt><dd>3</dd><dt>Size</dt><dd>2 × 2</dd><dt>Income</dt><dd>105 Coin / 30 min</dd><dt>Build time</dt><dd>50 min</dd></dl></article><article class="polozka" id="hospoda"><div class="obr"><img src="/assets/enc/b-hospoda.webp" alt="The Mole Inn" loading="lazy" width="300" height="276"></div><h3>The Mole Inn</h3><dl><dt>Price</dt><dd>600 Coin</dd><dt>From level</dt><dd>5</dd><dt>Size</dt><dd>3 × 2</dd><dt>Income</dt><dd>65 Coin / 10 min</dd><dt>Build time</dt><dd>1 h</dd></dl></article><article class="polozka" id="trafika"><div class="obr"><img src="/assets/enc/b-trafika.webp" alt="Newsstand" loading="lazy" width="269" height="300"></div><h3>Newsstand</h3><dl><dt>Price</dt><dd>400 Coin</dd><dt>From level</dt><dd>6</dd><dt>Size</dt><dd>2 × 2</dd><dt>Income</dt><dd>50 Coin / 5 min</dd><dt>Build time</dt><dd>30 min</dd></dl></article><article class="polozka" id="kovarna"><div class="obr"><img src="/assets/enc/b-kovarna.webp" alt="Smithy" loading="lazy" width="300" height="253"></div><h3>Smithy</h3><dl><dt>Price</dt><dd>1,600 Coin</dd><dt>From level</dt><dd>8</dd><dt>Size</dt><dd>2 × 2</dd><dt>Income</dt><dd>265 Coin / 1 h</dd><dt>Build time</dt><dd>1.3 h</dd></dl></article><article class="polozka" id="hasici"><div class="obr"><img src="/assets/enc/b-hasici.webp" alt="Fire station" loading="lazy" width="300" height="219"></div><h3>Fire station</h3><dl><dt>Price</dt><dd>1,500 Coin</dd><dt>From level</dt><dd>9</dd><dt>Size</dt><dd>3 × 3</dd><dt>Income</dt><dd>170 Coin / 20 min</dd><dt>Build time</dt><dd>3 h</dd></dl></article><article class="polozka" id="stadion"><div class="obr"><img src="/assets/enc/b-stadion.webp" alt="Football stadium" loading="lazy" width="300" height="220"></div><h3>Football stadium</h3><dl><dt>Price</dt><dd>8,000 Coin</dd><dt>From level</dt><dd>10</dd><dt>Size</dt><dd>4 × 4</dd><dt>Income</dt><dd>840 Coin / 2 h</dd><dt>Build time</dt><dd>12 h</dd></dl><div class="znacky"><span>Only 1 allowed</span></div></article><article class="polozka" id="posta"><div class="obr"><img src="/assets/enc/b-posta.webp" alt="Post office" loading="lazy" width="300" height="289"></div><h3>Post office</h3><dl><dt>Price</dt><dd>1,200 Coin</dd><dt>From level</dt><dd>12</dd><dt>Size</dt><dd>3 × 2</dd><dt>Income</dt><dd>125 Coin / 15 min</dd><dt>Build time</dt><dd>2 h</dd></dl></article><article class="polozka" id="statek"><div class="obr"><img src="/assets/enc/b-statek.webp" alt="Farm" loading="lazy" width="300" height="220"></div><h3>Farm</h3><dl><dt>Price</dt><dd>3,250 Coin</dd><dt>From level</dt><dd>14</dd><dt>Size</dt><dd>3 × 3</dd><dt>Income</dt><dd>660 Coin / 2 h</dd><dt>Build time</dt><dd>2 h</dd></dl></article><article class="polozka" id="radnice"><div class="obr"><img src="/assets/enc/b-radnice.webp" alt="Town hall" loading="lazy" width="300" height="223"></div><h3>Town hall</h3><dl><dt>Price</dt><dd>3,000 Coin</dd><dt>From level</dt><dd>16</dd><dt>Size</dt><dd>3 × 3</dd><dt>Income</dt><dd>385 Coin / 1 h</dd><dt>Build time</dt><dd>4 h</dd></dl></article><article class="polozka" id="kadernictvi"><div class="obr"><img src="/assets/enc/b-kadernictvi.webp" alt="Hair salon" loading="lazy" width="300" height="212"></div><h3>Hair salon</h3><dl><dt>Price</dt><dd>4,450 Coin</dd><dt>From level</dt><dd>18</dd><dt>Size</dt><dd>2 × 2</dd><dt>Income</dt><dd>1,485 Coin / 4 h</dd><dt>Build time</dt><dd>2.5 h</dd></dl></article><article class="polozka" id="skola"><div class="obr"><img src="/assets/enc/b-skola.webp" alt="School" loading="lazy" width="300" height="286"></div><h3>School</h3><dl><dt>Price</dt><dd>2,500 Coin</dd><dt>From level</dt><dd>20</dd><dt>Size</dt><dd>3 × 3</dd><dt>Income</dt><dd>295 Coin / 1 h</dd><dt>Build time</dt><dd>4 h</dd></dl></article><article class="polozka" id="kino"><div class="obr"><img src="/assets/enc/b-kino.webp" alt="Star Cinema" loading="lazy" width="300" height="249"></div><h3>Star Cinema</h3><dl><dt>Price</dt><dd>5,000 Coin</dd><dt>From level</dt><dd>23</dd><dt>Size</dt><dd>3 × 3</dd><dt>Income</dt><dd>630 Coin / 2 h</dd><dt>Build time</dt><dd>6 h</dd></dl></article><article class="polozka" id="lekarna"><div class="obr"><img src="/assets/enc/b-lekarna.webp" alt="Pharmacy" loading="lazy" width="300" height="201"></div><h3>Pharmacy</h3><dl><dt>Price</dt><dd>7,050 Coin</dd><dt>From level</dt><dd>26</dd><dt>Size</dt><dd>2 × 2</dd><dt>Income</dt><dd>3,640 Coin / 8 h</dd><dt>Build time</dt><dd>3.3 h</dd></dl></article><article class="polozka" id="cukrarna"><div class="obr"><img src="/assets/enc/b-cukrarna.webp" alt="Sweet shop" loading="lazy" width="300" height="259"></div><h3>Sweet shop</h3><dl><dt>Price</dt><dd>2,000 Coin</dd><dt>From level</dt><dd>29</dd><dt>Size</dt><dd>2 × 2</dd><dt>Income</dt><dd>250 Coin / 30 min</dd><dt>Build time</dt><dd>3 h</dd></dl></article><article class="polozka" id="kostel"><div class="obr"><img src="/assets/enc/b-kostel.webp" alt="Church" loading="lazy" width="300" height="235"></div><h3>Church</h3><dl><dt>Price</dt><dd>9,150 Coin</dd><dt>From level</dt><dd>32</dd><dt>Size</dt><dd>3 × 3</dd><dt>Income</dt><dd>260 Coin / 30 min</dd><dt>Build time</dt><dd>4 h</dd></dl><div class="znacky"><span>Only 1 allowed</span><span>Requires: happiness of at least 40</span></div></article><article class="polozka" id="fara"><div class="obr"><img src="/assets/enc/b-fara.webp" alt="Parsonage" loading="lazy" width="300" height="219"></div><h3>Parsonage</h3><dl><dt>Price</dt><dd>10,200 Coin</dd><dt>From level</dt><dd>35</dd><dt>Size</dt><dd>2 × 2</dd><dt>Income</dt><dd>550 Coin / 1 h</dd><dt>Build time</dt><dd>4.3 h</dd></dl><div class="znacky"><span>Only 1 allowed</span><span>Requires: a built Church</span></div></article><article class="polozka" id="nadrazi"><div class="obr"><img src="/assets/enc/b-nadrazi.webp" alt="Railway station" loading="lazy" width="300" height="242"></div><h3>Railway station</h3><dl><dt>Price</dt><dd>6,000 Coin</dd><dt>From level</dt><dd>38</dd><dt>Size</dt><dd>4 × 3</dd><dt>Income</dt><dd>770 Coin / 2 h</dd><dt>Build time</dt><dd>8 h</dd></dl></article><article class="polozka" id="reznictvi"><div class="obr"><img src="/assets/enc/b-reznictvi.webp" alt="Butcher&#x27;s shop" loading="lazy" width="300" height="212"></div><h3>Butcher&#x27;s shop</h3><dl><dt>Price</dt><dd>12,850 Coin</dd><dt>From level</dt><dd>42</dd><dt>Size</dt><dd>2 × 2</dd><dt>Income</dt><dd>1,245 Coin / 2 h</dd><dt>Build time</dt><dd>5.2 h</dd></dl></article><article class="polozka" id="mlyn"><div class="obr"><img src="/assets/enc/b-mlyn.webp" alt="Mill" loading="lazy" width="300" height="226"></div><h3>Mill</h3><dl><dt>Price</dt><dd>14,400 Coin</dd><dt>From level</dt><dd>46</dd><dt>Size</dt><dd>2 × 2</dd><dt>Income</dt><dd>2,660 Coin / 4 h</dd><dt>Build time</dt><dd>5.7 h</dd></dl><div class="znacky"><span>Requires: a built Farm</span></div></article><article class="polozka" id="pivovar"><div class="obr"><img src="/assets/enc/b-pivovar.webp" alt="Brewery" loading="lazy" width="291" height="300"></div><h3>Brewery</h3><dl><dt>Price</dt><dd>9,000 Coin</dd><dt>From level</dt><dd>50</dd><dt>Size</dt><dd>3 × 3</dd><dt>Income</dt><dd>1,190 Coin / 3 h</dd><dt>Build time</dt><dd>10 h</dd></dl></article><article class="polozka" id="pila"><div class="obr"><img src="/assets/enc/b-pila.webp" alt="Sawmill" loading="lazy" width="300" height="208"></div><h3>Sawmill</h3><dl><dt>Price</dt><dd>17,950 Coin</dd><dt>From level</dt><dd>55</dd><dt>Size</dt><dd>2 × 2</dd><dt>Income</dt><dd>6,075 Coin / 8 h</dd><dt>Build time</dt><dd>6.7 h</dd></dl></article><article class="polozka" id="rozhledna"><div class="obr"><img src="/assets/enc/b-rozhledna.webp" alt="Lookout tower" loading="lazy" width="139" height="300"></div><h3>Lookout tower</h3><dl><dt>Price</dt><dd>4,000 Coin</dd><dt>From level</dt><dd>60</dd><dt>Size</dt><dd>2 × 2</dd><dt>Income</dt><dd>505 Coin / 1 h</dd><dt>Build time</dt><dd>6 h</dd></dl></article><article class="polozka" id="knihovna"><div class="obr"><img src="/assets/enc/b-knihovna.webp" alt="Library" loading="lazy" width="300" height="238"></div><h3>Library</h3><dl><dt>Price</dt><dd>22,150 Coin</dd><dt>From level</dt><dd>65</dd><dt>Size</dt><dd>2 × 2</dd><dt>Income</dt><dd>430 Coin / 30 min</dd><dt>Build time</dt><dd>7.7 h</dd></dl></article><article class="polozka" id="cihelna"><div class="obr"><img src="/assets/enc/b-cihelna.webp" alt="Brickworks" loading="lazy" width="300" height="274"></div><h3>Brickworks</h3><dl><dt>Price</dt><dd>24,300 Coin</dd><dt>From level</dt><dd>70</dd><dt>Size</dt><dd>3 × 3</dd><dt>Income</dt><dd>915 Coin / 1 h</dd><dt>Build time</dt><dd>8.3 h</dd></dl></article><article class="polozka" id="ordinace"><div class="obr"><img src="/assets/enc/b-ordinace.webp" alt="Doctor&#x27;s office" loading="lazy" width="300" height="231"></div><h3>Doctor&#x27;s office</h3><dl><dt>Price</dt><dd>26,950 Coin</dd><dt>From level</dt><dd>76</dd><dt>Size</dt><dd>2 × 2</dd><dt>Income</dt><dd>1,960 Coin / 2 h</dd><dt>Build time</dt><dd>9 h</dd></dl></article><article class="polozka" id="zamek"><div class="obr"><img src="/assets/enc/b-zamek.webp" alt="Manor house" loading="lazy" width="248" height="300"></div><h3>Manor house</h3><dl><dt>Price</dt><dd>12,000 Coin</dd><dt>From level</dt><dd>82</dd><dt>Size</dt><dd>4 × 4</dd><dt>Income</dt><dd>1,470 Coin / 4 h</dd><dt>Build time</dt><dd>12 h</dd></dl></article><article class="polozka" id="sluzebna"><div class="obr"><img src="/assets/enc/b-sluzebna.webp" alt="Police station" loading="lazy" width="300" height="253"></div><h3>Police station</h3><dl><dt>Price</dt><dd>32,350 Coin</dd><dt>From level</dt><dd>88</dd><dt>Size</dt><dd>2 × 2</dd><dt>Income</dt><dd>4,425 Coin / 4 h</dd><dt>Build time</dt><dd>10.3 h</dd></dl></article><article class="polozka" id="restaurace"><div class="obr"><img src="/assets/enc/b-restaurace.webp" alt="Restaurant" loading="lazy" width="300" height="207"></div><h3>Restaurant</h3><dl><dt>Price</dt><dd>35,600 Coin</dd><dt>From level</dt><dd>95</dd><dt>Size</dt><dd>2 × 2</dd><dt>Income</dt><dd>9,435 Coin / 8 h</dd><dt>Build time</dt><dd>11 h</dd></dl></article><article class="polozka" id="sokolovna"><div class="obr"><img src="/assets/enc/b-sokolovna.webp" alt="Gymnasium" loading="lazy" width="300" height="203"></div><h3>Gymnasium</h3><dl><dt>Price</dt><dd>38,900 Coin</dd><dt>From level</dt><dd>102</dd><dt>Size</dt><dd>3 × 3</dd><dt>Income</dt><dd>625 Coin / 30 min</dd><dt>Build time</dt><dd>11.8 h</dd></dl></article><article class="polozka" id="hotel"><div class="obr"><span class="emoji" aria-hidden="true">🏨</span></div><h3>Hotel</h3><dl><dt>Price</dt><dd>42,750 Coin</dd><dt>From level</dt><dd>110</dd><dt>Size</dt><dd>3 × 3</dd><dt>Income</dt><dd>1,335 Coin / 1 h</dd><dt>Build time</dt><dd>12.7 h</dd></dl><div class="znacky"><span>Requires: a built Railway station</span></div></article><article class="polozka" id="vinarna"><div class="obr"><span class="emoji" aria-hidden="true">🍷</span></div><h3>Wine bar</h3><dl><dt>Price</dt><dd>46,650 Coin</dd><dt>From level</dt><dd>118</dd><dt>Size</dt><dd>2 × 2</dd><dt>Income</dt><dd>2,840 Coin / 2 h</dd><dt>Build time</dt><dd>13.7 h</dd></dl></article><article class="polozka" id="zahradnictvi"><div class="obr"><img src="/assets/enc/b-zahradnictvi.webp" alt="Garden centre" loading="lazy" width="300" height="203"></div><h3>Garden centre</h3><dl><dt>Price</dt><dd>50,650 Coin</dd><dt>From level</dt><dd>126</dd><dt>Size</dt><dd>2 × 2</dd><dt>Income</dt><dd>6,020 Coin / 4 h</dd><dt>Build time</dt><dd>14.5 h</dd></dl></article><article class="polozka" id="autoservis"><div class="obr"><img src="/assets/enc/b-autoservis.webp" alt="Car workshop" loading="lazy" width="300" height="216"></div><h3>Car workshop</h3><dl><dt>Price</dt><dd>54,700 Coin</dd><dt>From level</dt><dd>134</dd><dt>Size</dt><dd>3 × 3</dd><dt>Income</dt><dd>12,710 Coin / 8 h</dd><dt>Build time</dt><dd>15.3 h</dd></dl></article><article class="polozka" id="koupaliste"><div class="obr"><img src="/assets/enc/b-koupaliste.webp" alt="Swimming pool" loading="lazy" width="300" height="201"></div><h3>Swimming pool</h3><dl><dt>Price</dt><dd>58,800 Coin</dd><dt>From level</dt><dd>142</dd><dt>Size</dt><dd>4 × 4</dd><dt>Income</dt><dd>835 Coin / 30 min</dd><dt>Build time</dt><dd>16.3 h</dd></dl><div class="znacky"><span>Only 1 allowed</span></div></article><article class="polozka" id="muzeum"><div class="obr"><img src="/assets/enc/b-muzeum.webp" alt="Museum" loading="lazy" width="300" height="213"></div><h3>Museum</h3><dl><dt>Price</dt><dd>63,000 Coin</dd><dt>From level</dt><dd>150</dd><dt>Size</dt><dd>3 × 3</dd><dt>Income</dt><dd>1,755 Coin / 1 h</dd><dt>Build time</dt><dd>17.2 h</dd></dl></article><article class="polozka" id="divadlo"><div class="obr"><img src="/assets/enc/b-divadlo.webp" alt="Theatre" loading="lazy" width="300" height="225"></div><h3>Theatre</h3><dl><dt>Price</dt><dd>68,300 Coin</dd><dt>From level</dt><dd>160</dd><dt>Size</dt><dd>3 × 3</dd><dt>Income</dt><dd>3,725 Coin / 2 h</dd><dt>Build time</dt><dd>18.3 h</dd></dl></article><article class="polozka" id="hvezdarna"><div class="obr"><img src="/assets/enc/b-hvezdarna.webp" alt="Observatory" loading="lazy" width="300" height="233"></div><h3>Observatory</h3><dl><dt>Price</dt><dd>73,650 Coin</dd><dt>From level</dt><dd>170</dd><dt>Size</dt><dd>2 × 2</dd><dt>Income</dt><dd>7,870 Coin / 4 h</dd><dt>Build time</dt><dd>19.3 h</dd></dl></article><article class="polozka" id="sjezdovka"><div class="obr"><img src="/assets/enc/b-sjezdovka.webp" alt="Ski slope with lift" loading="lazy" width="300" height="220"></div><h3>Ski slope with lift</h3><dl><dt>Price</dt><dd>81,850 Coin</dd><dt>From level</dt><dd>185</dd><dt>Size</dt><dd>4 × 4</dd><dt>Income</dt><dd>16,995 Coin / 8 h</dd><dt>Build time</dt><dd>21 h</dd></dl><div class="znacky"><span>Only 1 allowed</span></div></article><article class="polozka" id="hrad"><div class="obr"><img src="/assets/enc/b-hrad.webp" alt="Castle" loading="lazy" width="300" height="230"></div><h3>Castle</h3><dl><dt>Price</dt><dd>90,250 Coin</dd><dt>From level</dt><dd>200</dd><dt>Size</dt><dd>4 × 4</dd><dt>Income</dt><dd>1,140 Coin / 30 min</dd><dt>Build time</dt><dd>22.7 h</dd></dl><div class="znacky"><span>Only 1 allowed</span><span>Requires: a built Manor house</span><span>Requires: happiness of at least 150</span></div></article></div></section>
+<section id="ozdoby"><h2>Decorations and roads</h2><div class="mrizka"><article class="polozka" id="cesta"><div class="obr"><span class="emoji" aria-hidden="true">🛤️</span></div><h3>Road</h3><dl><dt>Price</dt><dd>10 Coin</dd><dt>Size</dt><dd>1 × 1</dd></dl></article><article class="polozka" id="strom"><div class="obr"><img src="/assets/enc/b-strom.webp" alt="Tree" loading="lazy" width="271" height="300"></div><h3>Tree</h3><dl><dt>Price</dt><dd>25 Coin</dd><dt>Size</dt><dd>1 × 1</dd><dt>Happiness</dt><dd>+2</dd></dl></article><article class="polozka" id="plot"><div class="obr"><img src="/assets/enc/b-plot.webp" alt="Little fence" loading="lazy" width="300" height="191"></div><h3>Little fence</h3><dl><dt>Price</dt><dd>15 Coin</dd><dt>From level</dt><dd>2</dd><dt>Size</dt><dd>1 × 1</dd><dt>Happiness</dt><dd>+1</dd></dl></article><article class="polozka" id="lavicka"><div class="obr"><img src="/assets/enc/b-lavicka.webp" alt="Bench" loading="lazy" width="300" height="222"></div><h3>Bench</h3><dl><dt>Price</dt><dd>40 Coin</dd><dt>From level</dt><dd>2</dd><dt>Size</dt><dd>1 × 1</dd><dt>Happiness</dt><dd>+3</dd></dl></article><article class="polozka" id="reka"><div class="obr"><span class="emoji" aria-hidden="true">🌊</span></div><h3>River</h3><dl><dt>Price</dt><dd>20 Coin</dd><dt>From level</dt><dd>3</dd><dt>Size</dt><dd>1 × 1</dd><dt>Happiness</dt><dd>+1</dd></dl></article><article class="polozka" id="chodnik"><div class="obr"><span class="emoji" aria-hidden="true">🧱</span></div><h3>Paved path</h3><dl><dt>Price</dt><dd>20 Coin</dd><dt>From level</dt><dd>3</dd><dt>Size</dt><dd>1 × 1</dd></dl></article><article class="polozka" id="kvetiny"><div class="obr"><img src="/assets/enc/b-kvetiny.webp" alt="Flower bed" loading="lazy" width="300" height="240"></div><h3>Flower bed</h3><dl><dt>Price</dt><dd>30 Coin</dd><dt>From level</dt><dd>3</dd><dt>Size</dt><dd>1 × 1</dd><dt>Happiness</dt><dd>+2</dd></dl></article><article class="polozka" id="most"><div class="obr"><span class="emoji" aria-hidden="true">🌉</span></div><h3>Wooden bridge</h3><dl><dt>Price</dt><dd>200 Coin</dd><dt>From level</dt><dd>4</dd><dt>Size</dt><dd>1 × 1</dd></dl></article><article class="polozka" id="kasna"><div class="obr"><img src="/assets/enc/b-kasna.webp" alt="Fountain" loading="lazy" width="235" height="300"></div><h3>Fountain</h3><dl><dt>Price</dt><dd>200 Coin</dd><dt>From level</dt><dd>4</dd><dt>Size</dt><dd>2 × 2</dd><dt>Happiness</dt><dd>+10</dd></dl></article><article class="polozka" id="houpacka"><div class="obr"><img src="/assets/enc/b-houpacka.webp" alt="Swing" loading="lazy" width="300" height="266"></div><h3>Swing</h3><dl><dt>Price</dt><dd>150 Coin</dd><dt>From level</dt><dd>5</dd><dt>Size</dt><dd>1 × 1</dd><dt>Happiness</dt><dd>+5</dd></dl></article><article class="polozka" id="socha"><div class="obr"><img src="/assets/enc/b-socha.webp" alt="Founder&#x27;s statue" loading="lazy" width="174" height="300"></div><h3>Founder&#x27;s statue</h3><dl><dt>Price</dt><dd>300 Coin</dd><dt>From level</dt><dd>6</dd><dt>Size</dt><dd>1 × 1</dd><dt>Happiness</dt><dd>+8</dd></dl></article><article class="polozka" id="pelisek"><div class="obr"><img src="/assets/enc/b-pelisek.webp" alt="Cat bed" loading="lazy" width="300" height="224"></div><h3>Cat bed</h3><dl><dt>Price</dt><dd>300 Coin</dd><dt>From level</dt><dd>7</dd><dt>Size</dt><dd>1 × 1</dd><dt>Happiness</dt><dd>+3</dd></dl><div class="znacky"><span>Only 1 allowed</span></div></article><article class="polozka" id="rybnik"><div class="obr"><img src="/assets/enc/b-rybnik.webp" alt="Pond" loading="lazy" width="300" height="227"></div><h3>Pond</h3><dl><dt>Price</dt><dd>600 Coin</dd><dt>From level</dt><dd>8</dd><dt>Size</dt><dd>2 × 2</dd><dt>Happiness</dt><dd>+12</dd></dl></article></div></section>
+<section id="vanoce"><h2>Christmas items</h2><div class="mrizka"><article class="polozka" id="lampa"><div class="obr"><img src="/assets/enc/b-lampa.webp" alt="Christmas lantern" loading="lazy" width="101" height="300"></div><h3>Christmas lantern</h3><dl><dt>Price</dt><dd>35 Coin</dd><dt>Size</dt><dd>1 × 1</dd><dt>Happiness</dt><dd>+2</dd></dl><div class="znacky"><span>🎄 Christmas only</span></div></article><article class="polozka" id="snehulak"><div class="obr"><img src="/assets/enc/b-snehulak.webp" alt="Snowman" loading="lazy" width="199" height="300"></div><h3>Snowman</h3><dl><dt>Price</dt><dd>40 Coin</dd><dt>Size</dt><dd>1 × 1</dd><dt>Happiness</dt><dd>+3</dd></dl><div class="znacky"><span>🎄 Christmas only</span></div></article><article class="polozka" id="kapr"><div class="obr"><img src="/assets/enc/b-kapr.webp" alt="Tub with a carp" loading="lazy" width="300" height="271"></div><h3>Tub with a carp</h3><dl><dt>Price</dt><dd>50 Coin</dd><dt>Size</dt><dd>1 × 1</dd><dt>Happiness</dt><dd>+3</dd></dl><div class="znacky"><span>🎄 Christmas only</span></div></article><article class="polozka" id="vanocni_stromek"><div class="obr"><img src="/assets/enc/b-vanocni_stromek.webp" alt="Christmas tree" loading="lazy" width="243" height="300"></div><h3>Christmas tree</h3><dl><dt>Price</dt><dd>60 Coin</dd><dt>Size</dt><dd>1 × 1</dd><dt>Happiness</dt><dd>+4</dd></dl><div class="znacky"><span>🎄 Christmas only</span></div></article><article class="polozka" id="svarak"><div class="obr"><img src="/assets/enc/b-svarak.webp" alt="Mulled wine stall" loading="lazy" width="275" height="300"></div><h3>Mulled wine stall</h3><dl><dt>Price</dt><dd>300 Coin</dd><dt>Size</dt><dd>2 × 2</dd><dt>Income</dt><dd>20 Coin / 2 min</dd><dt>Build time</dt><dd>5 min</dd></dl><div class="znacky"><span>🎄 Christmas only</span></div></article><article class="polozka" id="darky"><div class="obr"><img src="/assets/enc/b-darky.webp" alt="Pile of presents" loading="lazy" width="300" height="274"></div><h3>Pile of presents</h3><dl><dt>Size</dt><dd>1 × 1</dd><dt>Happiness</dt><dd>+4</dd></dl><div class="znacky"><span>🎁 From the advent calendar</span></div></article><article class="polozka" id="velky_strom"><div class="obr"><img src="/assets/enc/b-velky_strom.webp" alt="Giant Christmas tree" loading="lazy" width="232" height="300"></div><h3>Giant Christmas tree</h3><dl><dt>Size</dt><dd>2 × 2</dd><dt>Happiness</dt><dd>+20</dd></dl><div class="znacky"><span>🎁 From the advent calendar</span></div></article><article class="polozka" id="zvon"><div class="obr"><img src="/assets/enc/b-zvon.webp" alt="Christmas bell" loading="lazy" width="275" height="300"></div><h3>Christmas bell</h3><dl><dt>Size</dt><dd>1 × 1</dd><dt>Happiness</dt><dd>+2</dd></dl><div class="znacky"><span>🍪 At the Christmas market</span></div></article><article class="polozka" id="sane"><div class="obr"><img src="/assets/enc/b-sane.webp" alt="Sleigh with presents" loading="lazy" width="300" height="265"></div><h3>Sleigh with presents</h3><dl><dt>Size</dt><dd>1 × 1</dd><dt>Happiness</dt><dd>+3</dd></dl><div class="znacky"><span>🍪 At the Christmas market</span></div></article><article class="polozka" id="andel"><div class="obr"><img src="/assets/enc/b-andel.webp" alt="Angel with lights" loading="lazy" width="224" height="300"></div><h3>Angel with lights</h3><dl><dt>Size</dt><dd>1 × 1</dd><dt>Happiness</dt><dd>+4</dd></dl><div class="znacky"><span>🍪 At the Christmas market</span></div></article><article class="polozka" id="sob"><div class="obr"><img src="/assets/enc/b-sob.webp" alt="Reindeer" loading="lazy" width="197" height="300"></div><h3>Reindeer</h3><dl><dt>Size</dt><dd>1 × 1</dd><dt>Happiness</dt><dd>+4</dd></dl><div class="znacky"><span>🍪 At the Christmas market</span></div></article><article class="polozka" id="svetelna_brana"><div class="obr"><img src="/assets/enc/b-svetelna_brana.webp" alt="Light gate" loading="lazy" width="254" height="300"></div><h3>Light gate</h3><dl><dt>Size</dt><dd>1 × 1</dd><dt>Happiness</dt><dd>+4</dd></dl><div class="znacky"><span>🍪 At the Christmas market</span></div></article><article class="polozka" id="pernik"><div class="obr"><img src="/assets/enc/b-pernik.webp" alt="Gingerbread house" loading="lazy" width="300" height="285"></div><h3>Gingerbread house</h3><dl><dt>Size</dt><dd>1 × 1</dd><dt>Happiness</dt><dd>+5</dd></dl><div class="znacky"><span>🍪 At the Christmas market</span></div></article><article class="polozka" id="kluziste"><div class="obr"><img src="/assets/enc/b-kluziste.webp" alt="Ice rink" loading="lazy" width="300" height="208"></div><h3>Ice rink</h3><dl><dt>Size</dt><dd>2 × 2</dd><dt>Happiness</dt><dd>+9</dd></dl><div class="znacky"><span>🍪 At the Christmas market</span></div></article><article class="polozka" id="betlem"><div class="obr"><img src="/assets/enc/b-betlem.webp" alt="Nativity scene" loading="lazy" width="300" height="300"></div><h3>Nativity scene</h3><dl><dt>Size</dt><dd>2 × 2</dd><dt>Happiness</dt><dd>+12</dd></dl><div class="znacky"><span>🍪 At the Christmas market</span></div></article></div></section>
+<section id="obyvatele"><h2>Residents</h2><div class="mrizka"><article class="polozka" id="bohous"><div class="obr"><img src="/assets/enc/c-bohous.webp" alt="Bob Noggin" loading="lazy" width="148" height="220"></div><h3>Bob Noggin</h3><p>The mayor. An eternal optimist.</p><p class="kdy"><b>Arrives:</b> right from the start</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Stroll across the plain <span style="opacity:.7">(30 s)</span></li><li>Plan the new town <span style="opacity:.7">(2 min)</span></li><li>Take a nap <span style="opacity:.7">(5 min)</span></li><li>Speech on the green <span style="opacity:.7">(1 h)</span></li></ul></details></article><article class="polozka" id="jarmila"><div class="obr"><img src="/assets/enc/c-jarmila.webp" alt="Jane Noggin" loading="lazy" width="143" height="220"></div><h3>Jane Noggin</h3><p>The mayor&#x27;s wife. She can fix absolutely anything.</p><p class="kdy"><b>Arrives:</b> when you build: Cottage</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Fix the fence <span style="opacity:.7">(1 min)</span></li><li>Bake buns <span style="opacity:.7">(4 min)</span></li><li>Tidy the green <span style="opacity:.7">(10 min)</span></li><li>Sew new curtains <span style="opacity:.7">(2 h)</span></li></ul></details></article><article class="polozka" id="pepik"><div class="obr"><img src="/assets/enc/c-pepik.webp" alt="Pete Noggin" loading="lazy" width="160" height="220"></div><h3>Pete Noggin</h3><p>The mayor&#x27;s son. A rascal with a skateboard.</p><p class="kdy"><b>Arrives:</b> when you build: 2× Cottage</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Go skateboarding <span style="opacity:.7">(45 s)</span></li><li>Draw with chalk on the road <span style="opacity:.7">(3 min)</span></li><li>Hunt for treasure <span style="opacity:.7">(8 min)</span></li><li>Build a fort <span style="opacity:.7">(1 h)</span></li></ul></details></article><article class="polozka" id="kolacek"><div class="obr"><img src="/assets/enc/c-kolacek.webp" alt="Master Muffin" loading="lazy" width="126" height="220"></div><h3>Master Muffin</h3><p>The baker. He bakes for the whole town.</p><p class="kdy"><b>Arrives:</b> when you build: Bakery</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (3)</summary><ul class="ukoly"><li>Bake rolls <span style="opacity:.7">(1 min)</span></li><li>Deliver bread <span style="opacity:.7">(5 min)</span></li><li>Bake Christmas braids <span style="opacity:.7">(1.5 h)</span></li></ul></details></article><article class="polozka" id="krtek"><div class="obr"><img src="/assets/enc/c-krtek.webp" alt="Innkeeper Mole" loading="lazy" width="91" height="220"></div><h3>Innkeeper Mole</h3><p>Owns the inn. Knows everything about everyone.</p><p class="kdy"><b>Arrives:</b> when you build: The Mole Inn</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (3)</summary><ul class="ukoly"><li>Pour lemonade <span style="opacity:.7">(2 min)</span></li><li>Tell stories <span style="opacity:.7">(6 min)</span></li><li>Host a pub quiz <span style="opacity:.7">(2 h)</span></li></ul></details></article><article class="polozka" id="stovickova"><div class="obr"><img src="/assets/enc/c-stovickova.webp" alt="Mrs. Sorrel" loading="lazy" width="95" height="220"></div><h3>Mrs. Sorrel</h3><p>Runs the newsstand. The best source of gossip in town.</p><p class="kdy"><b>Arrives:</b> when you build: Newsstand</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (3)</summary><ul class="ukoly"><li>Sell newspapers <span style="opacity:.7">(1 min)</span></li><li>Gossip with the neighbours <span style="opacity:.7">(5 min)</span></li><li>Do the crossword <span style="opacity:.7">(1 h)</span></li></ul></details></article><article class="polozka" id="hadice"><div class="obr"><img src="/assets/enc/c-hadice.webp" alt="Chief Hose" loading="lazy" width="166" height="220"></div><h3>Chief Hose</h3><p>Firefighter. Sees fires everywhere.</p><p class="kdy"><b>Arrives:</b> when you build: Fire station</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (3)</summary><ul class="ukoly"><li>Hose drill <span style="opacity:.7">(2 min)</span></li><li>Watch for fires <span style="opacity:.7">(10 min)</span></li><li>Fire brigade drill <span style="opacity:.7">(3 h)</span></li></ul></details></article><article class="polozka" id="vitr"><div class="obr"><img src="/assets/enc/c-vitr.webp" alt="Postman Breeze" loading="lazy" width="135" height="220"></div><h3>Postman Breeze</h3><p>Delivers the letters. Got lost in the storm himself.</p><p class="kdy"><b>Arrives:</b> when you build: Post office</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (3)</summary><ul class="ukoly"><li>Deliver letters <span style="opacity:.7">(3 min)</span></li><li>Look for lost parcels <span style="opacity:.7">(12 min)</span></li><li>Deliver Christmas cards <span style="opacity:.7">(2 h)</span></li></ul></details></article><article class="polozka" id="zlatuska"><div class="obr"><img src="/assets/enc/c-zlatuska.webp" alt="Teacher Goldie" loading="lazy" width="84" height="220"></div><h3>Teacher Goldie</h3><p>Strict but fair. Knows what 7 × 8 is.</p><p class="kdy"><b>Arrives:</b> when you build: School</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (3)</summary><ul class="ukoly"><li>Mark dictations <span style="opacity:.7">(5 min)</span></li><li>School trip <span style="opacity:.7">(1 h)</span></li><li>Rehearse the school play <span style="opacity:.7">(3 h)</span></li></ul></details></article><article class="polozka" id="verka"><div class="obr"><img src="/assets/enc/c-verka.webp" alt="Confectioner Vera" loading="lazy" width="120" height="220"></div><h3>Confectioner Vera</h3><p>Her cream puffs are famous as far as the county town.</p><p class="kdy"><b>Arrives:</b> when you build: Sweet shop</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (2)</summary><ul class="ukoly"><li>Bake cream puffs <span style="opacity:.7">(10 min)</span></li><li>Wedding cake <span style="opacity:.7">(1.5 h)</span></li></ul></details></article><article class="polozka" id="simek"><div class="obr"><img src="/assets/enc/c-simek.webp" alt="Stationmaster Simms" loading="lazy" width="108" height="220"></div><h3>Stationmaster Simms</h3><p>The trains run on time. Almost.</p><p class="kdy"><b>Arrives:</b> when you build: Railway station</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (2)</summary><ul class="ukoly"><li>Dispatch the express <span style="opacity:.7">(15 min)</span></li><li>Draw up the timetable <span style="opacity:.7">(2 h)</span></li></ul></details></article><article class="polozka" id="hrabe"><div class="obr"><img src="/assets/enc/c-hrabe.webp" alt="Steward Earl" loading="lazy" width="86" height="220"></div><h3>Steward Earl</h3><p>Gives tours of the manor and remembers every vase.</p><p class="kdy"><b>Arrives:</b> when you build: Manor house</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (2)</summary><ul class="ukoly"><li>Tour of the manor <span style="opacity:.7">(30 min)</span></li><li>Hold a manor ball <span style="opacity:.7">(4 h)</span></li></ul></details></article><article class="polozka" id="bubla"><div class="obr"><img src="/assets/enc/c-bubla.webp" alt="Brewer Bubbles" loading="lazy" width="141" height="220"></div><h3>Brewer Bubbles</h3><p>Brews the best beer in the county. Or so he says.</p><p class="kdy"><b>Arrives:</b> when you build: Brewery</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (2)</summary><ul class="ukoly"><li>Prepare the malt <span style="opacity:.7">(20 min)</span></li><li>Brew a batch <span style="opacity:.7">(3 h)</span></li></ul></details></article><article class="polozka" id="marenka"><div class="obr"><img src="/assets/enc/c-marenka.webp" alt="Mary Bunn" loading="lazy" width="122" height="220"></div><h3>Mary Bunn</h3><p>Works at the general store. Knows everything about everyone.</p><p class="kdy"><b>Arrives:</b> when you build: General store</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Unpack a delivery <span style="opacity:.7">(5 min)</span></li><li>Catch up on gossip <span style="opacity:.7">(30 min)</span></li><li>Do the stocktake <span style="opacity:.7">(2 h)</span></li><li>Big sale <span style="opacity:.7">(8 h)</span></li></ul></details></article><article class="polozka" id="kuba"><div class="obr"><img src="/assets/enc/c-kuba.webp" alt="Jake Hammer" loading="lazy" width="139" height="220"></div><h3>Jake Hammer</h3><p>The blacksmith. Strong as an ox, gentle as a lamb.</p><p class="kdy"><b>Arrives:</b> when you build: Smithy</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Forge a horseshoe <span style="opacity:.7">(5 min)</span></li><li>Sharpen the axes <span style="opacity:.7">(30 min)</span></li><li>Forge a grille <span style="opacity:.7">(2 h)</span></li><li>Wrought-iron gate <span style="opacity:.7">(8 h)</span></li></ul></details></article><article class="polozka" id="vojta"><div class="obr"><img src="/assets/enc/c-vojta.webp" alt="Walt Farmer" loading="lazy" width="146" height="220"></div><h3>Walt Farmer</h3><p>Farmer from the farm. Up with the chickens.</p><p class="kdy"><b>Arrives:</b> when you build: Farm</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Collect eggs <span style="opacity:.7">(5 min)</span></li><li>Milk the cows <span style="opacity:.7">(30 min)</span></li><li>Bring in the hay <span style="opacity:.7">(2 h)</span></li><li>Go to market <span style="opacity:.7">(8 h)</span></li></ul></details></article><article class="polozka" id="zaneta"><div class="obr"><img src="/assets/enc/c-zaneta.webp" alt="Jeanette Blowdry" loading="lazy" width="123" height="220"></div><h3>Jeanette Blowdry</h3><p>Hairdresser. A different hair colour every week.</p><p class="kdy"><b>Arrives:</b> when you build: Hair salon</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Trim a fringe <span style="opacity:.7">(5 min)</span></li><li>Do a perm <span style="opacity:.7">(30 min)</span></li><li>New colour <span style="opacity:.7">(2 h)</span></li><li>Wedding hairdo <span style="opacity:.7">(8 h)</span></li></ul></details></article><article class="polozka" id="pilulka"><div class="obr"><img src="/assets/enc/c-pilulka.webp" alt="Pharmacist Pill" loading="lazy" width="80" height="220"></div><h3>Pharmacist Pill</h3><p>Pharmacist. Has drops for everything.</p><p class="kdy"><b>Arrives:</b> when you build: Pharmacy</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Mix herbal tea <span style="opacity:.7">(5 min)</span></li><li>Make an ointment <span style="opacity:.7">(30 min)</span></li><li>Cook cough syrup <span style="opacity:.7">(2 h)</span></li><li>Order supplies <span style="opacity:.7">(8 h)</span></li></ul></details></article><article class="polozka" id="zvonik"><div class="obr"><img src="/assets/enc/c-zvonik.webp" alt="Bellringer Louis" loading="lazy" width="134" height="220"></div><h3>Bellringer Louis</h3><p>The bellringer. Hears what you can&#x27;t.</p><p class="kdy"><b>Arrives:</b> when you build: Church</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Ring the noon bell <span style="opacity:.7">(5 min)</span></li><li>Climb the tower <span style="opacity:.7">(30 min)</span></li><li>Wind the clock <span style="opacity:.7">(2 h)</span></li><li>Midnight bells <span style="opacity:.7">(8 h)</span></li></ul></details></article><article class="polozka" id="bonifac"><div class="obr"><img src="/assets/enc/c-bonifac.webp" alt="Father Boniface" loading="lazy" width="109" height="220"></div><h3>Father Boniface</h3><p>The parish priest. Kind, but won&#x27;t hear a word against cake.</p><p class="kdy"><b>Arrives:</b> when you build: Parsonage</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Prepare a sermon <span style="opacity:.7">(5 min)</span></li><li>Dig the parish garden <span style="opacity:.7">(30 min)</span></li><li>Write the chronicle <span style="opacity:.7">(2 h)</span></li><li>Organise a village fair <span style="opacity:.7">(8 h)</span></li></ul></details></article><article class="polozka" id="bucek"><div class="obr"><img src="/assets/enc/c-bucek.webp" alt="Butcher Bacon" loading="lazy" width="155" height="220"></div><h3>Butcher Bacon</h3><p>The butcher. Sausages from grandpa&#x27;s recipe.</p><p class="kdy"><b>Arrives:</b> when you build: Butcher&#x27;s shop</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Make frankfurters <span style="opacity:.7">(5 min)</span></li><li>Smoke sausages <span style="opacity:.7">(30 min)</span></li><li>Pig-roast feast <span style="opacity:.7">(2 h)</span></li><li>Smoked ham for Christmas <span style="opacity:.7">(8 h)</span></li></ul></details></article><article class="polozka" id="moucka"><div class="obr"><img src="/assets/enc/c-moucka.webp" alt="Miller Floury" loading="lazy" width="143" height="220"></div><h3>Miller Floury</h3><p>The miller. Always a bit floury.</p><p class="kdy"><b>Arrives:</b> when you build: Mill</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Carry sacks <span style="opacity:.7">(5 min)</span></li><li>Grind the grain <span style="opacity:.7">(30 min)</span></li><li>Repair the mill wheel <span style="opacity:.7">(2 h)</span></li><li>Flour for the winter <span style="opacity:.7">(8 h)</span></li></ul></details></article><article class="polozka" id="parez"><div class="obr"><img src="/assets/enc/c-parez.webp" alt="Stump Oakley" loading="lazy" width="131" height="220"></div><h3>Stump Oakley</h3><p>Lumberjack. Talks little, chops a lot.</p><p class="kdy"><b>Arrives:</b> when you build: Sawmill</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Split firewood <span style="opacity:.7">(5 min)</span></li><li>Saw planks <span style="opacity:.7">(30 min)</span></li><li>Fell trees in the forest <span style="opacity:.7">(2 h)</span></li><li>Roof beams <span style="opacity:.7">(8 h)</span></li></ul></details></article><article class="polozka" id="brejlova"><div class="obr"><img src="/assets/enc/c-brejlova.webp" alt="Mrs. Specs" loading="lazy" width="100" height="220"></div><h3>Mrs. Specs</h3><p>The librarian. Shh!</p><p class="kdy"><b>Arrives:</b> when you build: Library</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Sort the books <span style="opacity:.7">(5 min)</span></li><li>Story time for kids <span style="opacity:.7">(30 min)</span></li><li>Repair old books <span style="opacity:.7">(2 h)</span></li><li>Meet-the-author evening <span style="opacity:.7">(8 h)</span></li></ul></details></article><article class="polozka" id="hlina"><div class="obr"><img src="/assets/enc/c-hlina.webp" alt="Brickmaker Clay" loading="lazy" width="138" height="220"></div><h3>Brickmaker Clay</h3><p>The brickmaker. He&#x27;d build a castle if he had the time.</p><p class="kdy"><b>Arrives:</b> when you build: Brickworks</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Fill the moulds <span style="opacity:.7">(5 min)</span></li><li>Dry the bricks <span style="opacity:.7">(30 min)</span></li><li>Fire the bricks <span style="opacity:.7">(2 h)</span></li><li>Big order <span style="opacity:.7">(8 h)</span></li></ul></details></article><article class="polozka" id="stastny"><div class="obr"><img src="/assets/enc/c-stastny.webp" alt="Dr. Happy" loading="lazy" width="113" height="220"></div><h3>Dr. Happy</h3><p>The doctor. Laughter is the best medicine.</p><p class="kdy"><b>Arrives:</b> when you build: Doctor&#x27;s office</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Check blood pressure <span style="opacity:.7">(5 min)</span></li><li>Vaccinations <span style="opacity:.7">(30 min)</span></li><li>Visit patients <span style="opacity:.7">(2 h)</span></li><li>Night shift <span style="opacity:.7">(8 h)</span></li></ul></details></article><article class="polozka" id="pecka"><div class="obr"><img src="/assets/enc/c-pecka.webp" alt="Sergeant Pitt" loading="lazy" width="145" height="220"></div><h3>Sergeant Pitt</h3><p>Police officer. Hasn&#x27;t arrested anyone yet, but he&#x27;s ready.</p><p class="kdy"><b>Arrives:</b> when you build: Police station</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Patrol the village <span style="opacity:.7">(5 min)</span></li><li>Check the parking <span style="opacity:.7">(30 min)</span></li><li>Investigate a case <span style="opacity:.7">(2 h)</span></li><li>All-day patrol <span style="opacity:.7">(8 h)</span></li></ul></details></article><article class="polozka" id="knedlik"><div class="obr"><img src="/assets/enc/c-knedlik.webp" alt="Chef Dumpling" loading="lazy" width="135" height="220"></div><h3>Chef Dumpling</h3><p>The chef. His beef in cream sauce is his pride.</p><p class="kdy"><b>Arrives:</b> when you build: Restaurant</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Cook soup <span style="opacity:.7">(5 min)</span></li><li>Make dumplings <span style="opacity:.7">(30 min)</span></li><li>Beef in cream sauce <span style="opacity:.7">(2 h)</span></li><li>Wedding feast <span style="opacity:.7">(8 h)</span></li></ul></details></article><article class="polozka" id="svalovec"><div class="obr"><img src="/assets/enc/c-svalovec.webp" alt="Coach Muscles" loading="lazy" width="114" height="220"></div><h3>Coach Muscles</h3><p>Coach at the gym. A hundred squats every morning.</p><p class="kdy"><b>Arrives:</b> when you build: Gymnasium</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Morning warm-up <span style="opacity:.7">(5 min)</span></li><li>Train the kids <span style="opacity:.7">(30 min)</span></li><li>Organise a race <span style="opacity:.7">(2 h)</span></li><li>Rehearse a gymnastics display <span style="opacity:.7">(8 h)</span></li></ul></details></article><article class="polozka" id="klicek"><div class="obr"><img src="/assets/enc/c-klicek.webp" alt="Hotelier Keys" loading="lazy" width="96" height="220"></div><h3>Hotelier Keys</h3><p>The hotelier. Knows every guest by name.</p><p class="kdy"><b>Arrives:</b> when you build: Hotel</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Clean the rooms <span style="opacity:.7">(5 min)</span></li><li>Reception shift <span style="opacity:.7">(30 min)</span></li><li>Trip for the guests <span style="opacity:.7">(2 h)</span></li><li>Hotel ball <span style="opacity:.7">(8 h)</span></li></ul></details></article><article class="polozka" id="hrozen"><div class="obr"><img src="/assets/enc/c-hrozen.webp" alt="Winemaker Grape" loading="lazy" width="138" height="220"></div><h3>Winemaker Grape</h3><p>The winemaker. Claims wine is healthy.</p><p class="kdy"><b>Arrives:</b> when you build: Wine bar</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Wine tasting <span style="opacity:.7">(5 min)</span></li><li>Tidy the cellar <span style="opacity:.7">(30 min)</span></li><li>Bottle the wine <span style="opacity:.7">(2 h)</span></li><li>New wine festival <span style="opacity:.7">(8 h)</span></li></ul></details></article><article class="polozka" id="kyticka"><div class="obr"><img src="/assets/enc/c-kyticka.webp" alt="Daisy Green" loading="lazy" width="104" height="220"></div><h3>Daisy Green</h3><p>The gardener. Talks to her plants.</p><p class="kdy"><b>Arrives:</b> when you build: Garden centre</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Water the flowers <span style="opacity:.7">(5 min)</span></li><li>Repot seedlings <span style="opacity:.7">(30 min)</span></li><li>Tie bouquets <span style="opacity:.7">(2 h)</span></li><li>New greenhouse <span style="opacity:.7">(8 h)</span></li></ul></details></article><article class="polozka" id="sroubek"><div class="obr"><img src="/assets/enc/c-sroubek.webp" alt="Mechanic Bolt" loading="lazy" width="109" height="220"></div><h3>Mechanic Bolt</h3><p>Car mechanic. Fixes anything with wheels.</p><p class="kdy"><b>Arrives:</b> when you build: Car workshop</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Change the tyres <span style="opacity:.7">(5 min)</span></li><li>Change the oil <span style="opacity:.7">(30 min)</span></li><li>Repair an engine <span style="opacity:.7">(2 h)</span></li><li>Restore a vintage car <span style="opacity:.7">(8 h)</span></li></ul></details></article><article class="polozka" id="vlnka"><div class="obr"><img src="/assets/enc/c-vlnka.webp" alt="Lifeguard Ripple" loading="lazy" width="122" height="220"></div><h3>Lifeguard Ripple</h3><p>The lifeguard. An ice swimmer in winter.</p><p class="kdy"><b>Arrives:</b> when you build: Swimming pool</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Cold-water swim <span style="opacity:.7">(5 min)</span></li><li>Clean the pool <span style="opacity:.7">(30 min)</span></li><li>Swimming lessons <span style="opacity:.7">(2 h)</span></li><li>Swimming race <span style="opacity:.7">(8 h)</span></li></ul></details></article><article class="polozka" id="prasil"><div class="obr"><img src="/assets/enc/c-prasil.webp" alt="Curator Munchausen" loading="lazy" width="101" height="220"></div><h3>Curator Munchausen</h3><p>Museum curator. Every exhibit has a story.</p><p class="kdy"><b>Arrives:</b> when you build: Museum</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Dust the exhibits <span style="opacity:.7">(5 min)</span></li><li>Give a guided tour <span style="opacity:.7">(30 min)</span></li><li>New exhibition <span style="opacity:.7">(2 h)</span></li><li>Go on a dig <span style="opacity:.7">(8 h)</span></li></ul></details></article><article class="polozka" id="hvezdova"><div class="obr"><img src="/assets/enc/c-hvezdova.webp" alt="Mrs. Starr" loading="lazy" width="98" height="220"></div><h3>Mrs. Starr</h3><p>Actress. Her whole life is one big performance.</p><p class="kdy"><b>Arrives:</b> when you build: Theatre</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Learn lines <span style="opacity:.7">(5 min)</span></li><li>Dress rehearsal <span style="opacity:.7">(30 min)</span></li><li>Evening show <span style="opacity:.7">(2 h)</span></li><li>Grand premiere <span style="opacity:.7">(8 h)</span></li></ul></details></article><article class="polozka" id="kometa"><div class="obr"><img src="/assets/enc/c-kometa.webp" alt="Astronomer Comet" loading="lazy" width="116" height="220"></div><h3>Astronomer Comet</h3><p>Astronomer. Sleeps by day, stargazes by night.</p><p class="kdy"><b>Arrives:</b> when you build: Observatory</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Clean the telescope <span style="opacity:.7">(5 min)</span></li><li>Draw a star map <span style="opacity:.7">(30 min)</span></li><li>Night observation <span style="opacity:.7">(2 h)</span></li><li>Search for a new comet <span style="opacity:.7">(8 h)</span></li></ul></details></article><article class="polozka" id="slalom"><div class="obr"><img src="/assets/enc/c-slalom.webp" alt="Skier Slalom" loading="lazy" width="146" height="220"></div><h3>Skier Slalom</h3><p>Ski instructor. Born on skis.</p><p class="kdy"><b>Arrives:</b> when you build: Ski slope with lift</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Groom the slope <span style="opacity:.7">(5 min)</span></li><li>Start the ski lift <span style="opacity:.7">(30 min)</span></li><li>Ski school <span style="opacity:.7">(2 h)</span></li><li>Slalom race <span style="opacity:.7">(8 h)</span></li></ul></details></article><article class="polozka" id="rytir"><div class="obr"><img src="/assets/enc/c-rytir.webp" alt="Castellan Knight" loading="lazy" width="184" height="220"></div><h3>Castellan Knight</h3><p>Keeper of the castle. Wears armour even to breakfast.</p><p class="kdy"><b>Arrives:</b> when you build: Castle</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Walk the walls <span style="opacity:.7">(5 min)</span></li><li>Raise the banner <span style="opacity:.7">(30 min)</span></li><li>Knights&#x27; tournament <span style="opacity:.7">(2 h)</span></li><li>Castle feast <span style="opacity:.7">(8 h)</span></li></ul></details></article><article class="polozka" id="enous"><div class="obr"><img src="/assets/enc/c-enous.webp" alt="Snuggles" loading="lazy" width="220" height="212"></div><h3>Snuggles</h3><p>A black tomcat with white paws. Lord of Pláňov (in his own opinion).</p><p class="kdy"><b>Arrives:</b> when you build: Cat bed</p><details><summary style="cursor:pointer;color:var(--zlata);margin-top:8px;font-size:.9rem">Jobs (4)</summary><ul class="ukoly"><li>Sleep in the sun <span style="opacity:.7">(5 min)</span></li><li>Hunt mice <span style="opacity:.7">(1 h)</span></li><li>Purr by the stove <span style="opacity:.7">(4 h)</span></li><li>Roam the rooftops <span style="opacity:.7">(8 h)</span></li></ul></details></article></div></section>
+<section id="odznaky"><h2>Badges</h2><p style="text-align:center;color:var(--text2)">Bronze / silver / gold</p><div class="mrizka"><article class="polozka"><h3>🏅 Builder</h3><p>Have 5 / 12 / 25 houses in town</p><dl><dt>🥉</dt><dd>150 Coin + 30 XP</dd><dt>🥈</dt><dd>600 Coin + 80 XP</dd><dt>🥇</dt><dd>2,000 Coin + 200 XP</dd></dl></article><article class="polozka"><h3>🏅 Road builder</h3><p>Build 10 / 40 / 100 pieces of road</p><dl><dt>🥉</dt><dd>100 Coin + 20 XP</dd><dt>🥈</dt><dd>400 Coin + 60 XP</dd><dt>🥇</dt><dd>1,200 Coin + 150 XP</dd></dl></article><article class="polozka"><h3>🏅 Experienced mayor</h3><p>Reach level 10 / 50 / 150</p><dl><dt>🥉</dt><dd>200 Coin</dd><dt>🥈</dt><dd>1,000 Coin</dd><dt>🥇</dt><dd>5,000 Coin</dd></dl></article><article class="polozka"><h3>🏅 Rich man</h3><p>Collect a total of 1,000 / 10,000 / 100,000 Coin from buildings</p><dl><dt>🥉</dt><dd>100 Coin + 30 XP</dd><dt>🥈</dt><dd>800 Coin + 100 XP</dd><dt>🥇</dt><dd>5,000 Coin + 300 XP</dd></dl></article><article class="polozka"><h3>🏅 Hard worker</h3><p>Complete 10 / 50 / 200 residents&#x27; tasks</p><dl><dt>🥉</dt><dd>150 Coin + 30 XP</dd><dt>🥈</dt><dd>700 Coin + 100 XP</dd><dt>🥇</dt><dd>3,000 Coin + 300 XP</dd></dl></article><article class="polozka"><h3>🏅 A full Pláňov</h3><p>Bring 3 / 7 / 13 residents to town</p><dl><dt>🥉</dt><dd>150 Coin + 30 XP</dd><dt>🥈</dt><dd>700 Coin + 100 XP</dd><dt>🥇</dt><dd>3,000 Coin + 300 XP</dd></dl></article><article class="polozka"><h3>🏅 Gardener</h3><p>Raise the town&#x27;s happiness to 20 / 60 / 150</p><dl><dt>🥉</dt><dd>150 Coin + 30 XP</dd><dt>🥈</dt><dd>700 Coin + 100 XP</dd><dt>🥇</dt><dd>3,000 Coin + 300 XP</dd></dl></article><article class="polozka"><h3>🏅 Good neighbour</h3><p>Visit friends 1 / 10 / 50×</p><dl><dt>🥉</dt><dd>100 Coin + 20 XP</dd><dt>🥈</dt><dd>500 Coin + 80 XP</dd><dt>🥇</dt><dd>2,000 Coin + 200 XP</dd></dl></article><article class="polozka"><h3>🏅 Snowball fighter</h3><p>Collect 5 / 25 / 100 snowballs</p><dl><dt>🥉</dt><dd>100 Coin + 20 XP</dd><dt>🥈</dt><dd>500 Coin + 80 XP</dd><dt>🥇</dt><dd>2,000 Coin + 200 XP</dd></dl></article><article class="polozka"><h3>🏅 Seeker</h3><p>Find 5 / 25 / 100 random events</p><dl><dt>🥉</dt><dd>100 Coin + 20 XP</dd><dt>🥈</dt><dd>500 Coin + 80 XP</dd><dt>🥇</dt><dd>2,000 Coin + 200 XP</dd></dl></article><article class="polozka"><h3>🏅 Site manager</h3><p>Upgrade buildings 1 / 10 / 30×</p><dl><dt>🥉</dt><dd>150 Coin + 30 XP</dd><dt>🥈</dt><dd>800 Coin + 100 XP</dd><dt>🥇</dt><dd>3,000 Coin + 300 XP</dd></dl></article><article class="polozka"><h3>🏅 Landowner</h3><p>Buy 1 / 5 / 15 plots of land</p><dl><dt>🥉</dt><dd>200 Coin + 40 XP</dd><dt>🥈</dt><dd>1,000 Coin + 120 XP</dd><dt>🥇</dt><dd>4,000 Coin + 300 XP</dd></dl></article><article class="polozka"><h3>🏅 Advent fan</h3><p>Open 5 / 12 / 24 advent windows</p><dl><dt>🥉</dt><dd>200 Coin + 40 XP</dd><dt>🥈</dt><dd>800 Coin + 100 XP</dd><dt>🥇</dt><dd>3,000 Coin + 300 XP</dd></dl></article><article class="polozka"><h3>🏅 At the market</h3><p>Shop at the Christmas market 1 / 5 / 15×</p><dl><dt>🥉</dt><dd>100 Coin + 20 XP</dd><dt>🥈</dt><dd>500 Coin + 80 XP</dd><dt>🥇</dt><dd>1,500 Coin + 200 XP</dd></dl></article></div></section>
+<section class="vyzva">
+  <h2>Want to see it for yourself?</h2>
+  <p>Pláňov is free, with no ads and nothing to download. Just click and play.</p>
+  <a class="tl tl-hrat" href="/hra/?lang=en"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>PLAY FOR FREE</a>
+</section>
+
+  </div>
+</main>
+<footer>
+  <div class="obal">
+    <div>© 2026 Pláňov · Made by <b>Aleš Jaroš</b></div>
+    <nav>
+      <a href="/hra/?lang=en">Play</a>
+      <a href="/en/wiki/">Wiki</a>
+      <a href="/en/guide/">Guide</a>
+      <a href="/en/news/">News</a>
+      <a href="/en/privacy.html">Privacy policy</a>
+      <a href="https://vapik.itch.io/planov" rel="noopener">Pláňov on itch.io</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
