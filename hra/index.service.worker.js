@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1795797077|301673821';
+const CACHE_VERSION = '1795865685|9554583';
 /** @type {string} */
 const CACHE_PREFIX = 'Planov-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
